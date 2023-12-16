@@ -1,6 +1,6 @@
 const videos = document.getElementsByTagName('video')
 
-for (video of videos) {
+for (let video of videos) {
     console.log(video)
     video.addEventListener('click', () => {
         if (video.paused) {
