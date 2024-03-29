@@ -8,7 +8,7 @@ body {
 }
 
 .imagem-fundo {
-    background-image: url("/assets/images/Vista-Aérea-1-Rodrigo-Oliveira.jpeg");
+    background-image: url(../../assets/images/Vista-Aérea-1-Rodrigo-Oliveira.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     background-color: rgba(0, 0, 0, 0.7);
