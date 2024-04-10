@@ -2,7 +2,7 @@ const palavrasEducacaoAmbiental = ["educação ambiental", "sustentabilidade", "
 
 const palavrasSucessaoEcologica = ["sucessão ecológica", "ecese", "organismos pioneiros"]
 
-const palavrasIncendio = ["incendio", "fogo", "queimada", "chamas", "incêndio florestal", "ignição", "devastação", "fogaréu"]
+const palavrasIncendio = ["incêndio", "fogo", "queimada", "chamas", "incêndio florestal", "ignição", "devastação", "fogaréu"]
 
 const palavrasAtividadeHumana = ["atividade humana", "intervenção humana", "ações humanas", "humana", "humanos"]
 
@@ -10,7 +10,7 @@ const palavrasQualidadeAgua = ["qualidade da água", "água", "água potável", 
 
 const palavrasEspecieArborea = ["classificação arbórea", "classificação árvores", "arbórea", "pioneiras", "secundárias", "clímax"]
 
-const palavrasEspecieFlora = ["espécies de flora", "tipos de plantas", "flora", "espécies de planta", "árvores", "árvore"]
+const palavrasEspecieFlora = ["espécies de flora", ,"espécies de Flora", "tipos de plantas", "flora", "espécies de planta", "árvores", "árvore"]
 
 const palavrasClassificacaoGeologica = ["classificação geológica", "classificação solo", "análise do solo", "análise solo", "geologia", "topografia", "solo"]
 
@@ -42,6 +42,28 @@ const botaoConfirmouFala = document.getElementById("botaoConfirmouTexto")
 const textoConfirmacaoFala = document.getElementById("confirmacaoTexto")
 const modalConfirmacao = new bootstrap.Modal(document.getElementById("modalConfirmacao"))
 
+const caminhoPastaAudio = "../../audio/"
+const audioRespostaPadrao = "resposta-padrao.mp3"
+const audioEducacaoAmbiental = "educacao-ambiental.mp3"
+const audioSucessaoEcologia = "sucessao-ecologica.mp3"
+const audioIncendio = "incendio.mp3"
+const audioAtividadeHumana = "atividades-humanas.mp3"
+const audioQualidadeAgua = "qualidade-agua.mp3"
+const audioEspecieArborea = "classificacao-arborea.mp3"
+const audioEspecieFlora = "especies-flora.mp3"
+const audioClassificacaoGeologica = "classificacao-geologica.mp3"
+const audioEspecieFauna = "especies-fauna.mp3"
+const audioBioma = "bioma.mp3"
+const audioClima = "clima.mp3"
+const audioContextoHistorico = "contexto-historico.mp3"
+const audioLagoaQuatro = "lagoa4.mp3"
+const audioConstrucaoHistorica = "construcao-historica.mp3"
+const audioLagoaTres = "lagoa3.mp3"
+const audioReflorestamento = "areas-reflorestamento.mp3"
+const audioRuinas = "ruinas.mp3"
+const audioFragmentoMata = "fragmento-mata-atlantica.mp3"
+const audioLaguaUm = "lagoa1.mp3"
+
 //Verifica qual biblioteca está sendo utilizada pelo navagedor
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 
@@ -68,69 +90,68 @@ botaoConfirmouFala.addEventListener('click', () => {
 
     var textoFaladoUsuario = textoConfirmacaoFala.innerHTML
 
-    let mensagemResposta = "Desculpe não encontrei nenhum conteúdo relacionado a esta pergunta."
+    let nomeArquivoAudioSerTocado = caminhoPastaAudio + audioRespostaPadrao
 
     if (verificarPossuiPalavra(textoFaladoUsuario, palavrasEducacaoAmbiental)) {
-        mensagemResposta = "Entendi que você está se referindo a educação ambiental. Aqui está um conteúdo sobre isso."
+        nomeArquivoAudioSerTocado = caminhoPastaAudio + audioEducacaoAmbiental
         window.location.href = "./resources/html/educacao-ambiental.html"
     } else if (verificarPossuiPalavra(textoFaladoUsuario, palavrasSucessaoEcologica)){
-        mensagemResposta = "Entendi que você está se referindo a sucessão ecológica. Aqui está um conteúdo sobre isso."
+        nomeArquivoAudioSerTocado = caminhoPastaAudio + audioSucessaoEcologia
         window.location.href = "./resources/html/sucessao-ecologica.html"
     } else if (verificarPossuiPalavra(textoFaladoUsuario, palavrasIncendio)){
-        mensagemResposta = "Entendi que você está se referindo a incêndio. Aqui está um conteúdo sobre isso."
+        nomeArquivoAudioSerTocado = caminhoPastaAudio + audioIncendio
         window.location.href = "./resources/html/incendio-criminoso.html"
     } else if (verificarPossuiPalavra(textoFaladoUsuario, palavrasAtividadeHumana)){
-        mensagemResposta = "Entendi que você está se referindo a atividades humanas. Aqui está um conteúdo sobre isso."
+        nomeArquivoAudioSerTocado = caminhoPastaAudio + audioAtividadeHumana
         window.location.href = "./resources/html/atividades-humanas.html"
     } else if (verificarPossuiPalavra(textoFaladoUsuario, palavrasQualidadeAgua)){
-        mensagemResposta = "Entendi que você está se referindo a qualidade da água. Aqui está um conteúdo sobre isso."
+        nomeArquivoAudioSerTocado = caminhoPastaAudio + audioQualidadeAgua
         window.location.href = "./resources/html/classificacao-agua.html"
     } else if (verificarPossuiPalavra(textoFaladoUsuario, palavrasEspecieArborea)){
-        mensagemResposta = "Entendi que você está se referindo a classificação das espécies arbóreas. Aqui está um conteúdo sobre isso."
+        nomeArquivoAudioSerTocado = caminhoPastaAudio + audioEspecieArborea
         window.location.href = "./resources/html/especies-arboreas.html"
     } else if (verificarPossuiPalavra(textoFaladoUsuario, palavrasEspecieFlora)){
-        mensagemResposta = "Entendi que você está se referindo as espécies de flora existentes na reserva. Aqui está um conteúdo sobre isso."
+        nomeArquivoAudioSerTocado = caminhoPastaAudio + audioEspecieFlora
         window.location.href = "./resources/html/especies-flora-mapa.html"
     } else if (verificarPossuiPalavra(textoFaladoUsuario, palavrasClassificacaoGeologica)){
-        mensagemResposta = "Entendi que você está se referindo a classificação geológica. Aqui está um conteúdo sobre isso."
+        nomeArquivoAudioSerTocado = caminhoPastaAudio + audioClassificacaoGeologica
         window.location.href = "./resources/html/classificacao-geologica.html"
     } else if (verificarPossuiPalavra(textoFaladoUsuario, palavrasEspecieFauna)){
-        mensagemResposta = "Entendi que você está se referindo as espécies de fauna existentes na reserva. Aqui está um conteúdo sobre isso."
+        nomeArquivoAudioSerTocado = caminhoPastaAudio + audioEspecieFauna
         window.location.href = "./resources/html/especies-fauna.html"
     } else if (verificarPossuiPalavra(textoFaladoUsuario, palavrasBioma)){
-        mensagemResposta = "Entendi que você está se referindo ao bioma da reserva. Aqui está um conteúdo sobre isso."
+        nomeArquivoAudioSerTocado = caminhoPastaAudio + audioBioma
         window.location.href = "./resources/html/bioma-mata-atlantica.html"
     } else if (verificarPossuiPalavra(textoFaladoUsuario, palavrasClima)){
-        mensagemResposta = "Entendi que você está se referindo ao clima da cidade. Aqui está um conteúdo sobre isso."
+        nomeArquivoAudioSerTocado = caminhoPastaAudio + audioClima
         window.location.href = "./resources/html/clima-cidade.html"
     } else if(verificarPossuiPalavra(textoFaladoUsuario, palavrasContextoHistorico)){
-        mensagemResposta = "Entendi que você está se referindo ao contexto histórico da reserva. Aqui está um conteúdo sobre isso."
+        nomeArquivoAudioSerTocado = caminhoPastaAudio + audioContextoHistorico
         window.location.href = "./resources/html/contextualizacao-historica.html"
     } else if(verificarPossuiPalavra(textoFaladoUsuario, palavrasLagoaQuatro)){
-        mensagemResposta = "Para chegar até a lagoa quatro siga as seguintes instruções: siga a trilha destacada no mapa, localizada próximo ao totem e a lagoa quatro estará localizada próxima a construção histórica."
+        nomeArquivoAudioSerTocado = caminhoPastaAudio + audioLagoaQuatro
         window.location.href = "#mapa"
     } else if(verificarPossuiPalavra(textoFaladoUsuario, palavrasConstrucaoHistorica)){
-        mensagemResposta = "Para chegar até a construção histórica siga as seguintes instruções: siga a trilha destacada no mapa. A construção histórica está localizada próximo a lagoa quatro. Uma curiosidade: essa construção era utilizada para criação de animais antigamente."
+        nomeArquivoAudioSerTocado = caminhoPastaAudio + audioConstrucaoHistorica
         window.location.href = "#mapa"
     } else if(verificarPossuiPalavra(textoFaladoUsuario, palavrasLagoaTres)){
-        mensagemResposta = "Para chegar até a lagoa três siga as seguintes instruções: siga a trilha destacada no mapa. Após passar pela construção histórica a lagoa três estará logo a frente."
+        nomeArquivoAudioSerTocado = caminhoPastaAudio + audioLagoaTres
         window.location.href = "#mapa"
     } else if(verificarPossuiPalavra(textoFaladoUsuario, palavrasReflorestamento)){
-        mensagemResposta = "Existem duas áreas de reflorestamento na reserva: uma está localizada após a lagoa 3, na parte esquerda da estrada e possuí uma vista muito bela. A outra está na parte direita da estrada, próximo a lagoa 1. Esta passou por diversas queimadas ao longo dos anos, mas se tornou resiliente. Siga a trilha destacada no mapa para identificar qual deseja visitar."
+        nomeArquivoAudioSerTocado = caminhoPastaAudio + audioReflorestamento
         window.location.href = "#mapa"
     } else if(verificarPossuiPalavra(textoFaladoUsuario, palavrasRuínas)){
-        mensagemResposta = "Para chegar até as ruínas siga as seguintes instruções: siga a trilha destacada no mapa. As ruínas estão logo após cruzar para o lado direito da estrada. Esse Foi o local onde foram gravados os episódios de uma série de vídeos do Ponto de Partida conhecida como: Um bocadinho de Manoel."
+        nomeArquivoAudioSerTocado = caminhoPastaAudio + audioRuinas
         window.location.href = "#mapa"
     } else if(verificarPossuiPalavra(textoFaladoUsuario, palavrasFragmentoMata)){
-        mensagemResposta = "Para chegar até o fragmento de Mata Atlântica siga as seguintes instruções: siga a trilha destacada no mapa. Após passar pelas ruínas, no lado direito da estrada, siga para a esquerda e você chegará até o local. Lembre-se que é um local importante para conservar a biodiversidade da reserva."
+        nomeArquivoAudioSerTocado = caminhoPastaAudio + audioFragmentoMata
         window.location.href = "#mapa"
     } else if(verificarPossuiPalavra(textoFaladoUsuario, palavrasLagoaUm)){
-        mensagemResposta = "Para chegar até a lagoa um siga as seguintes instruções: siga a trilha destacada no mapa. Após passar pelas ruínas, no lado direito da estrada, siga em frente até encontrar a lagoa um. Nessa lagoa é possível encontrar patinhos e passarinhos ao redor."
+        nomeArquivoAudioSerTocado = caminhoPastaAudio + audioLaguaUm
         window.location.href = "#mapa"
     }
 
-    
-    carregarMensagemVoz(mensagemResposta)
+    tocarArquivoAudio(nomeArquivoAudioSerTocado)
 })
 
 reconhecimentoVoz.addEventListener('result', function (evt) {
@@ -153,15 +174,8 @@ reconhecimentoVoz.addEventListener('audioend', function (){
     }
 })
 
-function carregarMensagemVoz(textoSerDito) {
-    const mensagemFalar = new SpeechSynthesisUtterance(textoSerDito);
-    mensagemFalar.rate = 1.6;
-    mensagemFalar.pitch = 1;
-    mensagemFalar.volume = 1;
-    mensagemFalar.lang = "PT-BR"
-
-
-    window.speechSynthesis.speak(mensagemFalar)
+function tocarArquivoAudio(nomeArquivoAudio) {
+    new Audio(nomeArquivoAudio).play()
 }
 
 function verificarPossuiPalavra(textoFalado, listaPalavras){
