@@ -42,7 +42,7 @@ const botaoConfirmouFala = document.getElementById("botaoConfirmouTexto")
 const textoConfirmacaoFala = document.getElementById("confirmacaoTexto")
 const modalConfirmacao = new bootstrap.Modal(document.getElementById("modalConfirmacao"))
 
-const caminhoPastaAudio = "../../audio/"
+const caminhoPastaAudio = "../audio/"
 const audioRespostaPadrao = "resposta-padrao.mp3"
 const audioEducacaoAmbiental = "educacao-ambiental.mp3"
 const audioSucessaoEcologia = "sucessao-ecologica.mp3"
