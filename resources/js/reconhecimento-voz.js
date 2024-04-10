@@ -42,27 +42,26 @@ const botaoConfirmouFala = document.getElementById("botaoConfirmouTexto")
 const textoConfirmacaoFala = document.getElementById("confirmacaoTexto")
 const modalConfirmacao = new bootstrap.Modal(document.getElementById("modalConfirmacao"))
 
-const caminhoPastaAudio = "../../audio/"
-const audioRespostaPadrao = "resposta-padrao.mp3"
-const audioEducacaoAmbiental = "educacao-ambiental.mp3"
-const audioSucessaoEcologia = "sucessao-ecologica.mp3"
-const audioIncendio = "incendio.mp3"
-const audioAtividadeHumana = "atividades-humanas.mp3"
-const audioQualidadeAgua = "qualidade-agua.mp3"
-const audioEspecieArborea = "classificacao-arborea.mp3"
-const audioEspecieFlora = "especies-flora.mp3"
-const audioClassificacaoGeologica = "classificacao-geologica.mp3"
-const audioEspecieFauna = "especies-fauna.mp3"
-const audioBioma = "bioma.mp3"
-const audioClima = "clima.mp3"
-const audioContextoHistorico = "contexto-historico.mp3"
-const audioLagoaQuatro = "lagoa4.mp3"
-const audioConstrucaoHistorica = "construcao-historica.mp3"
-const audioLagoaTres = "lagoa3.mp3"
-const audioReflorestamento = "areas-reflorestamento.mp3"
-const audioRuinas = "ruinas.mp3"
-const audioFragmentoMata = "fragmento-mata-atlantica.mp3"
-const audioLagoaUm = "lagoa1.mp3"
+const audioRespostaPadrao = "https://github.com/ja1za1/projeto-smarttotem/raw/main/audio/resposta-padrao.mp3"
+const audioEducacaoAmbiental = "https://github.com/ja1za1/projeto-smarttotem/raw/main/audio/educacao-ambiental.mp3"
+const audioSucessaoEcologia = "https://github.com/ja1za1/projeto-smarttotem/raw/main/audio/sucessao-ecologica.mp3"
+const audioIncendio = "https://github.com/ja1za1/projeto-smarttotem/raw/main/audio/incendio.mp3"
+const audioAtividadeHumana = "https://github.com/ja1za1/projeto-smarttotem/raw/main/audio/atividades-humanas.mp3"
+const audioQualidadeAgua = "https://github.com/ja1za1/projeto-smarttotem/raw/main/audio/qualidade-agua.mp3"
+const audioEspecieArborea = "https://github.com/ja1za1/projeto-smarttotem/raw/main/audio/classificacao-arborea.mp3"
+const audioEspecieFlora = "https://github.com/ja1za1/projeto-smarttotem/raw/main/audio/especies-flora.mp3"
+const audioClassificacaoGeologica = "https://github.com/ja1za1/projeto-smarttotem/raw/main/audio/classificacao-geologica.mp3"
+const audioEspecieFauna = "https://github.com/ja1za1/projeto-smarttotem/raw/main/audio/especies-fauna.mp3"
+const audioBioma = "https://github.com/ja1za1/projeto-smarttotem/raw/main/audio/bioma.mp3"
+const audioClima = "https://github.com/ja1za1/projeto-smarttotem/raw/main/audio/clima.mp3"
+const audioContextoHistorico = "https://github.com/ja1za1/projeto-smarttotem/raw/main/audio/contexto-historico.mp3"
+const audioLagoaQuatro = "https://github.com/ja1za1/projeto-smarttotem/raw/main/audio/lagoa4.mp3"
+const audioConstrucaoHistorica = "https://github.com/ja1za1/projeto-smarttotem/raw/main/audio/construcao-historica.mp3"
+const audioLagoaTres = "https://github.com/ja1za1/projeto-smarttotem/raw/main/audio/lagoa3.mp3"
+const audioReflorestamento = "https://github.com/ja1za1/projeto-smarttotem/raw/main/audio/areas-reflorestamento.mp3"
+const audioRuinas = "https://github.com/ja1za1/projeto-smarttotem/raw/main/audio/ruinas.mp3"
+const audioFragmentoMata = "https://github.com/ja1za1/projeto-smarttotem/raw/main/audio/fragmento-mata-atlantica.mp3"
+const audioLagoaUm = "https://github.com/ja1za1/projeto-smarttotem/raw/main/audio/lagoa1.mp3"
 
 //Verifica qual biblioteca está sendo utilizada pelo navagedor
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -91,61 +90,61 @@ botaoConfirmouFala.addEventListener('click', () => {
     let nomeArquivoAudioSerTocado = "https://github.com/ja1za1/projeto-smarttotem/raw/main/audio/resposta-padrao.mp3"
 
     if (verificarPossuiPalavra(textoFaladoUsuario, palavrasEducacaoAmbiental)) {
-        nomeArquivoAudioSerTocado = caminhoPastaAudio + audioEducacaoAmbiental
+        nomeArquivoAudioSerTocado =audioEducacaoAmbiental
         window.location.href = "./resources/html/educacao-ambiental.html"
     } else if (verificarPossuiPalavra(textoFaladoUsuario, palavrasSucessaoEcologica)){
-        nomeArquivoAudioSerTocado = caminhoPastaAudio + audioSucessaoEcologia
+        nomeArquivoAudioSerTocado =audioSucessaoEcologia
         window.location.href = "./resources/html/sucessao-ecologica.html"
     } else if (verificarPossuiPalavra(textoFaladoUsuario, palavrasIncendio)){
-        nomeArquivoAudioSerTocado = caminhoPastaAudio + audioIncendio
+        nomeArquivoAudioSerTocado = audioIncendio
         window.location.href = "./resources/html/incendio-criminoso.html"
     } else if (verificarPossuiPalavra(textoFaladoUsuario, palavrasAtividadeHumana)){
-        nomeArquivoAudioSerTocado = caminhoPastaAudio + audioAtividadeHumana
+        nomeArquivoAudioSerTocado = audioAtividadeHumana
         window.location.href = "./resources/html/atividades-humanas.html"
     } else if (verificarPossuiPalavra(textoFaladoUsuario, palavrasQualidadeAgua)){
-        nomeArquivoAudioSerTocado = caminhoPastaAudio + audioQualidadeAgua
+        nomeArquivoAudioSerTocado = audioQualidadeAgua
         window.location.href = "./resources/html/classificacao-agua.html"
     } else if (verificarPossuiPalavra(textoFaladoUsuario, palavrasEspecieArborea)){
-        nomeArquivoAudioSerTocado = caminhoPastaAudio + audioEspecieArborea
+        nomeArquivoAudioSerTocado = audioEspecieArborea
         window.location.href = "./resources/html/especies-arboreas.html"
     } else if (verificarPossuiPalavra(textoFaladoUsuario, palavrasEspecieFlora)){
-        nomeArquivoAudioSerTocado = caminhoPastaAudio + audioEspecieFlora
+        nomeArquivoAudioSerTocado = audioEspecieFlora
         window.location.href = "./resources/html/especies-flora-mapa.html"
     } else if (verificarPossuiPalavra(textoFaladoUsuario, palavrasClassificacaoGeologica)){
-        nomeArquivoAudioSerTocado = caminhoPastaAudio + audioClassificacaoGeologica
+        nomeArquivoAudioSerTocado = audioClassificacaoGeologica
         window.location.href = "./resources/html/classificacao-geologica.html"
     } else if (verificarPossuiPalavra(textoFaladoUsuario, palavrasEspecieFauna)){
-        nomeArquivoAudioSerTocado = caminhoPastaAudio + audioEspecieFauna
+        nomeArquivoAudioSerTocado = audioEspecieFauna
         window.location.href = "./resources/html/especies-fauna.html"
     } else if (verificarPossuiPalavra(textoFaladoUsuario, palavrasBioma)){
-        nomeArquivoAudioSerTocado = caminhoPastaAudio + audioBioma
+        nomeArquivoAudioSerTocado = audioBioma
         window.location.href = "./resources/html/bioma-mata-atlantica.html"
     } else if (verificarPossuiPalavra(textoFaladoUsuario, palavrasClima)){
-        nomeArquivoAudioSerTocado = caminhoPastaAudio + audioClima
+        nomeArquivoAudioSerTocado = audioClima
         window.location.href = "./resources/html/clima-cidade.html"
     } else if(verificarPossuiPalavra(textoFaladoUsuario, palavrasContextoHistorico)){
-        nomeArquivoAudioSerTocado = caminhoPastaAudio + audioContextoHistorico
+        nomeArquivoAudioSerTocado = audioContextoHistorico
         window.location.href = "./resources/html/contextualizacao-historica.html"
     } else if(verificarPossuiPalavra(textoFaladoUsuario, palavrasLagoaQuatro)){
-        nomeArquivoAudioSerTocado = caminhoPastaAudio + audioLagoaQuatro
+        nomeArquivoAudioSerTocado = audioLagoaQuatro
         window.location.href = "#mapa"
     } else if(verificarPossuiPalavra(textoFaladoUsuario, palavrasConstrucaoHistorica)){
-        nomeArquivoAudioSerTocado = caminhoPastaAudio + audioConstrucaoHistorica
+        nomeArquivoAudioSerTocado = audioConstrucaoHistorica
         window.location.href = "#mapa"
     } else if(verificarPossuiPalavra(textoFaladoUsuario, palavrasLagoaTres)){
-        nomeArquivoAudioSerTocado = caminhoPastaAudio + audioLagoaTres
+        nomeArquivoAudioSerTocado = audioLagoaTres
         window.location.href = "#mapa"
     } else if(verificarPossuiPalavra(textoFaladoUsuario, palavrasReflorestamento)){
-        nomeArquivoAudioSerTocado = caminhoPastaAudio + audioReflorestamento
+        nomeArquivoAudioSerTocado = audioReflorestamento
         window.location.href = "#mapa"
     } else if(verificarPossuiPalavra(textoFaladoUsuario, palavrasRuínas)){
-        nomeArquivoAudioSerTocado = caminhoPastaAudio + audioRuinas
+        nomeArquivoAudioSerTocado = audioRuinas
         window.location.href = "#mapa"
     } else if(verificarPossuiPalavra(textoFaladoUsuario, palavrasFragmentoMata)){
-        nomeArquivoAudioSerTocado = caminhoPastaAudio + audioFragmentoMata
+        nomeArquivoAudioSerTocado = audioFragmentoMata
         window.location.href = "#mapa"
     } else if(verificarPossuiPalavra(textoFaladoUsuario, palavrasLagoaUm)){
-        nomeArquivoAudioSerTocado = caminhoPastaAudio + audioLagoaUm
+        nomeArquivoAudioSerTocado = audioLagoaUm
         window.location.href = "#mapa"
     }
 
@@ -173,18 +172,7 @@ reconhecimentoVoz.addEventListener('audioend', function (){
 })
 
 function tocarArquivoAudio(nomeArquivoAudio) {
-    console.log(nomeArquivoAudio)
-    const arquivoAudio = new Audio(nomeArquivoAudio)
-    const promise = arquivoAudio.play();
-    if (promise !== undefined) { // On older browsers play() does not return anything, so the value would be undefined.
-    promise
-        .then(() => {
-            console.log("audio tocando")
-        })
-        .catch(error => {
-            console.log(error);
-        });
-    }
+    new Audio(nomeArquivoAudio).play()
 }
 
 function verificarPossuiPalavra(textoFalado, listaPalavras){
