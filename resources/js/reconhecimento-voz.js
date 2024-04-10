@@ -43,7 +43,8 @@ const textoConfirmacaoFala = document.getElementById("confirmacaoTexto")
 const modalConfirmacao = new bootstrap.Modal(document.getElementById("modalConfirmacao"))
 
 const audioRespostaPadrao = "https://github.com/ja1za1/projeto-smarttotem/raw/main/audio/resposta-padrao.mp3"
-const audioEducacaoAmbiental = "https://github.com/ja1za1/projeto-smarttotem/raw/main/audio/educacao-ambiental.mp3"
+// const audioEducacaoAmbiental = "https://github.com/ja1za1/projeto-smarttotem/raw/main/audio/educacao-ambiental.mp3"
+const audioEducacaoAmbiental = "../../audio/educacao-ambiental.mp3"
 const audioSucessaoEcologia = "https://github.com/ja1za1/projeto-smarttotem/raw/main/audio/sucessao-ecologica.mp3"
 const audioIncendio = "https://github.com/ja1za1/projeto-smarttotem/raw/main/audio/incendio.mp3"
 const audioAtividadeHumana = "https://github.com/ja1za1/projeto-smarttotem/raw/main/audio/atividades-humanas.mp3"
@@ -82,7 +83,7 @@ botaoFalar.addEventListener("click", () => {
     }
 }, false)
 
-botaoConfirmouFala.addEventListener('click', () => {
+botaoConfirmouFala.addEventListener('click', async () => {
     modalConfirmacao.hide()
 
     var textoFaladoUsuario = textoConfirmacaoFala.innerHTML
@@ -148,11 +149,13 @@ botaoConfirmouFala.addEventListener('click', () => {
         redirecionamento = "#mapa"
     }
 
-    tocarArquivoAudio(nomeArquivoAudioSerTocado)
+    await tocarArquivoAudio(new Audio(nomeArquivoAudioSerTocado))
+    
     if (redirecionamento){
         window.location.href = redirecionamento
     }
 })
+
 
 reconhecimentoVoz.addEventListener('result', function (evt) {
     var textoFaladoUsuario = evt.results[0][0].transcript
@@ -174,18 +177,23 @@ reconhecimentoVoz.addEventListener('audioend', function (){
     }
 })
 
-function tocarArquivoAudio(nomeArquivoAudio) {
-    console.log(nomeArquivoAudio)
-    const arquivoAudio = new Audio(nomeArquivoAudio)
-    const promise = arquivoAudio.play();
-    if (promise !== undefined) { // On older browsers play() does not return anything, so the value would be undefined.
-        promise.then(() => {
-            console.log("audio tocando")
-        })
-        .catch(error => {
-            console.log(error);
-        });
-    }
+function tocarArquivoAudio(arquivoAudio) {
+    console.log(arquivoAudio)
+    // const arquivoAudio = new Audio(nomeArquivoAudio)
+    // arquivoAudio.play()
+    return new Promise(res=>{
+        arquivoAudio.play()
+        arquivoAudio.onended = res
+      })
+    // const promise = arquivoAudio.play();
+    // if (promise !== undefined) { // On older browsers play() does not return anything, so the value would be undefined.
+    //     promise.then(() => {
+    //         console.log("audio tocando")
+    //     })
+    //     .catch(error => {
+    //         console.log(error);
+    //     });
+    // }
 }
 
 function verificarPossuiPalavra(textoFalado, listaPalavras){
