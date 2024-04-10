@@ -42,7 +42,7 @@ const botaoConfirmouFala = document.getElementById("botaoConfirmouTexto")
 const textoConfirmacaoFala = document.getElementById("confirmacaoTexto")
 const modalConfirmacao = new bootstrap.Modal(document.getElementById("modalConfirmacao"))
 
-const caminhoPastaAudio = "../audio/"
+const caminhoPastaAudio = "../../audio/"
 const audioRespostaPadrao = "resposta-padrao.mp3"
 const audioEducacaoAmbiental = "educacao-ambiental.mp3"
 const audioSucessaoEcologia = "sucessao-ecologica.mp3"
@@ -62,7 +62,7 @@ const audioLagoaTres = "lagoa3.mp3"
 const audioReflorestamento = "areas-reflorestamento.mp3"
 const audioRuinas = "ruinas.mp3"
 const audioFragmentoMata = "fragmento-mata-atlantica.mp3"
-const audioLaguaUm = "lagoa1.mp3"
+const audioLagoaUm = "lagoa1.mp3"
 
 //Verifica qual biblioteca está sendo utilizada pelo navagedor
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -74,8 +74,6 @@ reconhecimentoVoz.continuos = true
 
 //Especifica a linguagem a ser usada
 reconhecimentoVoz.lang = 'pt-BR'
-
-
 
 botaoFalar.addEventListener("click", () => {
     try {
@@ -147,7 +145,7 @@ botaoConfirmouFala.addEventListener('click', () => {
         nomeArquivoAudioSerTocado = caminhoPastaAudio + audioFragmentoMata
         window.location.href = "#mapa"
     } else if(verificarPossuiPalavra(textoFaladoUsuario, palavrasLagoaUm)){
-        nomeArquivoAudioSerTocado = caminhoPastaAudio + audioLaguaUm
+        nomeArquivoAudioSerTocado = caminhoPastaAudio + audioLagoaUm
         window.location.href = "#mapa"
     }
 
@@ -175,7 +173,18 @@ reconhecimentoVoz.addEventListener('audioend', function (){
 })
 
 function tocarArquivoAudio(nomeArquivoAudio) {
-    new Audio(nomeArquivoAudio).play()
+    console.log(nomeArquivoAudio)
+    const arquivoAudio = new Audio(nomeArquivoAudio)
+    const promise = arquivoAudio.play();
+    if (promise !== undefined) { // On older browsers play() does not return anything, so the value would be undefined.
+    promise
+        .then(() => {
+            console.log("audio tocando")
+        })
+        .catch(error => {
+            console.log(error);
+        });
+    }
 }
 
 function verificarPossuiPalavra(textoFalado, listaPalavras){
