@@ -88,7 +88,7 @@ botaoConfirmouFala.addEventListener('click', () => {
 
     var textoFaladoUsuario = textoConfirmacaoFala.innerHTML
 
-    let nomeArquivoAudioSerTocado = "https://github.com/ja1za1/projeto-smarttotem/blob/main/audio/resposta-padrao.mp3"
+    let nomeArquivoAudioSerTocado = "https://github.com/ja1za1/projeto-smarttotem/raw/main/audio/resposta-padrao.mp3"
 
     if (verificarPossuiPalavra(textoFaladoUsuario, palavrasEducacaoAmbiental)) {
         nomeArquivoAudioSerTocado = caminhoPastaAudio + audioEducacaoAmbiental
