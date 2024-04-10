@@ -175,7 +175,17 @@ reconhecimentoVoz.addEventListener('audioend', function (){
 })
 
 function tocarArquivoAudio(nomeArquivoAudio) {
-    new Audio(nomeArquivoAudio).play()
+    console.log(nomeArquivoAudio)
+    const arquivoAudio = new Audio(nomeArquivoAudio)
+    const promise = arquivoAudio.play();
+    if (promise !== undefined) { // On older browsers play() does not return anything, so the value would be undefined.
+        promise.then(() => {
+            console.log("audio tocando")
+        })
+        .catch(error => {
+            console.log(error);
+        });
+    }
 }
 
 function verificarPossuiPalavra(textoFalado, listaPalavras){

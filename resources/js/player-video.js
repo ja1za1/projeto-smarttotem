@@ -1,5 +1,4 @@
 
-
 window.onload = function() {
     let videos = document.getElementsByTagName('video')
     for (let video of videos) {
