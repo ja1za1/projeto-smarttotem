@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Mapa</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
+    <script src="../js/scrollreveal.js"></script>
+</head>
+<body>
+    <a class="botao-voltar text-dark text-decoration-none" href="mapa.html">
+        <img src="../../assets/images/arrow-left-solid.svg" alt="Voltar" width="80px" height="80px">
+        <h2 class="ms-2"><strong>Voltar</strong></h2>
+    </a>
+
+    <div class="content-stack justify-content-center bg-success text-white">
+        <div class="container texto-scroll-reveal" style="margin-top: 7rem;">
+            <div class="row row-cols-2 g-5">
+                <div class="col d-flex justify-content-center">
+                    <img id="imagem-local">
+                </div>
+
+                <div class="col fs-4">
+                    <h1 class="mb-3 "><strong id="titulo-local"></strong></h1>
+                    <p style="text-align: justify;" id="texto-local"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/template.js"></script>
+    <script src="../bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../js/scrollreveal-config.js"></script>
+</body>
+</html>

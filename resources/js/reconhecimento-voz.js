@@ -2,7 +2,7 @@ const palavrasEducacaoAmbiental = ["educação ambiental", "sustentabilidade", "
 
 const palavrasSucessaoEcologica = ["sucessão ecológica", "ecese", "organismos pioneiros"]
 
-const palavrasIncendio = ["incêndio", "fogo", "queimada", "chamas", "incêndio florestal", "ignição", "devastação", "fogaréu"]
+const palavrasIncendio = ["incêndio", "fogo", "queimada", "queimadas", "chamas", "incêndio florestal", "ignição", "devastação", "fogaréu"]
 
 const palavrasAtividadeHumana = ["atividade humana", "intervenção humana", "ações humanas", "humana", "humanos"]
 
@@ -42,27 +42,27 @@ const botaoConfirmouFala = document.getElementById("botaoConfirmouTexto")
 const textoConfirmacaoFala = document.getElementById("confirmacaoTexto")
 const modalConfirmacao = new bootstrap.Modal(document.getElementById("modalConfirmacao"))
 
-const audioRespostaPadrao = "https://github.com/ja1za1/projeto-smarttotem/raw/main/audio/resposta-padrao.mp3"
 // const audioEducacaoAmbiental = "https://github.com/ja1za1/projeto-smarttotem/raw/main/audio/educacao-ambiental.mp3"
-const audioEducacaoAmbiental = "../../audio/educacao-ambiental.mp3"
-const audioSucessaoEcologia = "https://github.com/ja1za1/projeto-smarttotem/raw/main/audio/sucessao-ecologica.mp3"
-const audioIncendio = "https://github.com/ja1za1/projeto-smarttotem/raw/main/audio/incendio.mp3"
-const audioAtividadeHumana = "https://github.com/ja1za1/projeto-smarttotem/raw/main/audio/atividades-humanas.mp3"
-const audioQualidadeAgua = "https://github.com/ja1za1/projeto-smarttotem/raw/main/audio/qualidade-agua.mp3"
-const audioEspecieArborea = "https://github.com/ja1za1/projeto-smarttotem/raw/main/audio/classificacao-arborea.mp3"
-const audioEspecieFlora = "https://github.com/ja1za1/projeto-smarttotem/raw/main/audio/especies-flora.mp3"
-const audioClassificacaoGeologica = "https://github.com/ja1za1/projeto-smarttotem/raw/main/audio/classificacao-geologica.mp3"
-const audioEspecieFauna = "https://github.com/ja1za1/projeto-smarttotem/raw/main/audio/especies-fauna.mp3"
-const audioBioma = "https://github.com/ja1za1/projeto-smarttotem/raw/main/audio/bioma.mp3"
-const audioClima = "https://github.com/ja1za1/projeto-smarttotem/raw/main/audio/clima.mp3"
-const audioContextoHistorico = "https://github.com/ja1za1/projeto-smarttotem/raw/main/audio/contexto-historico.mp3"
-const audioLagoaQuatro = "https://github.com/ja1za1/projeto-smarttotem/raw/main/audio/lagoa4.mp3"
-const audioConstrucaoHistorica = "https://github.com/ja1za1/projeto-smarttotem/raw/main/audio/construcao-historica.mp3"
-const audioLagoaTres = "https://github.com/ja1za1/projeto-smarttotem/raw/main/audio/lagoa3.mp3"
-const audioReflorestamento = "https://github.com/ja1za1/projeto-smarttotem/raw/main/audio/areas-reflorestamento.mp3"
-const audioRuinas = "https://github.com/ja1za1/projeto-smarttotem/raw/main/audio/ruinas.mp3"
-const audioFragmentoMata = "https://github.com/ja1za1/projeto-smarttotem/raw/main/audio/fragmento-mata-atlantica.mp3"
-const audioLagoaUm = "https://github.com/ja1za1/projeto-smarttotem/raw/main/audio/lagoa1.mp3"
+const audioRespostaPadrao = "../../assets/audios/resposta-padrao.mp3"
+const audioEducacaoAmbiental = "../../assets/audios/educacao-ambiental.mp3"
+const audioSucessaoEcologia = "../../assets/audios/sucessao-ecologica.mp3"
+const audioIncendio = "../../assets/audios/incendio.mp3"
+const audioAtividadeHumana = "../../assets/audios/atividades-humanas.mp3"
+const audioQualidadeAgua = "../../assets/audios/qualidade-agua.mp3"
+const audioEspecieArborea = "../../assets/audios/classificacao-arborea.mp3"
+const audioEspecieFlora = "../../assets/audios/especies-flora.mp3"
+const audioClassificacaoGeologica = "../../assets/audios/classificacao-geologica.mp3"
+const audioEspecieFauna = "../../assets/audios/especies-fauna.mp3"
+const audioBioma = "../../assets/audios/bioma.mp3"
+const audioClima = "../../assets/audios/clima.mp3"
+const audioContextoHistorico = "../../assets/audios/contexto-historico.mp3"
+const audioLagoaQuatro = "../../assets/audios/lagoa4.mp3"
+const audioConstrucaoHistorica = "../../assets/audios/construcao-historica.mp3"
+const audioLagoaTres = "../../assets/audios/lagoa3.mp3"
+const audioReflorestamento = "../../assets/audios/areas-reflorestamento.mp3"
+const audioRuinas = "../../assets/audios/ruinas.mp3"
+const audioFragmentoMata = "../../assets/audios/fragmento-mata-atlantica.mp3"
+const audioLagoaUm = "../../assets/audios/lagoa1.mp3"
 
 //Verifica qual biblioteca está sendo utilizada pelo navagedor
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -88,71 +88,99 @@ botaoConfirmouFala.addEventListener('click', async () => {
 
     var textoFaladoUsuario = textoConfirmacaoFala.innerHTML
     let nomeArquivoAudioSerTocado = audioRespostaPadrao
-    let redirecionamento = ""
+    let localRedirecionamento = ""
+    let redirecionarOutraPagina = false
 
     if (verificarPossuiPalavra(textoFaladoUsuario, palavrasEducacaoAmbiental)) {
         nomeArquivoAudioSerTocado = audioEducacaoAmbiental
-        redirecionamento = "./resources/html/educacao-ambiental.html"
+        localRedirecionamento = "../html/educacao-ambiental.html"
+        redirecionarOutraPagina = true
     } else if (verificarPossuiPalavra(textoFaladoUsuario, palavrasSucessaoEcologica)){
         nomeArquivoAudioSerTocado = audioSucessaoEcologia
-        redirecionamento = "./resources/html/sucessao-ecologica.html"
+        localRedirecionamento = "../html/sucessao-ecologica.html"
+        redirecionarOutraPagina = true
     } else if (verificarPossuiPalavra(textoFaladoUsuario, palavrasIncendio)){
         nomeArquivoAudioSerTocado = audioIncendio
-        redirecionamento = "./resources/html/incendio-criminoso.html"
+        localRedirecionamento = "../html/incendio-criminoso.html"
+        redirecionarOutraPagina = true
     } else if (verificarPossuiPalavra(textoFaladoUsuario, palavrasAtividadeHumana)){
         nomeArquivoAudioSerTocado = audioAtividadeHumana
-        redirecionamento = "./resources/html/atividades-humanas.html"
+        localRedirecionamento = "../html/atividades-humanas.html"
+        redirecionarOutraPagina = true
     } else if (verificarPossuiPalavra(textoFaladoUsuario, palavrasQualidadeAgua)){
         nomeArquivoAudioSerTocado = audioQualidadeAgua
-        redirecionamento = "./resources/html/classificacao-agua.html"
+        localRedirecionamento = "../html/classificacao-agua.html"
+        redirecionarOutraPagina = true
     } else if (verificarPossuiPalavra(textoFaladoUsuario, palavrasEspecieArborea)){
         nomeArquivoAudioSerTocado = audioEspecieArborea
-        redirecionamento = "./resources/html/especies-arboreas.html"
+        localRedirecionamento = "../html/especies-arboreas.html"
+        redirecionarOutraPagina = true
     } else if (verificarPossuiPalavra(textoFaladoUsuario, palavrasEspecieFlora)){
         nomeArquivoAudioSerTocado = audioEspecieFlora
-        redirecionamento = "./resources/html/especies-flora-mapa.html"
+        localRedirecionamento = "../html/especies-flora-mapa.html"
+        redirecionarOutraPagina = true
     } else if (verificarPossuiPalavra(textoFaladoUsuario, palavrasClassificacaoGeologica)){
         nomeArquivoAudioSerTocado = audioClassificacaoGeologica
-        redirecionamento = "./resources/html/classificacao-geologica.html"
+        localRedirecionamento = "../html/classificacao-geologica.html"
+        redirecionarOutraPagina = true
     } else if (verificarPossuiPalavra(textoFaladoUsuario, palavrasEspecieFauna)){
         nomeArquivoAudioSerTocado = audioEspecieFauna
-        redirecionamento = "./resources/html/especies-fauna.html"
+        localRedirecionamento = "../html/especies-fauna.html"
+        redirecionarOutraPagina = true
     } else if (verificarPossuiPalavra(textoFaladoUsuario, palavrasBioma)){
         nomeArquivoAudioSerTocado = audioBioma
-        redirecionamento = "./resources/html/bioma-mata-atlantica.html"
+        localRedirecionamento = "../html/bioma-mata-atlantica.html"
+        redirecionarOutraPagina = true
     } else if (verificarPossuiPalavra(textoFaladoUsuario, palavrasClima)){
         nomeArquivoAudioSerTocado = audioClima
-        redirecionamento = "./resources/html/clima-cidade.html"
+        localRedirecionamento = "../html/clima-cidade.html"
+        redirecionarOutraPagina = true
     } else if(verificarPossuiPalavra(textoFaladoUsuario, palavrasContextoHistorico)){
         nomeArquivoAudioSerTocado = audioContextoHistorico
-        redirecionamento = "./resources/html/contextualizacao-historica.html"
-    } else if(verificarPossuiPalavra(textoFaladoUsuario, palavrasLagoaQuatro)){
-        nomeArquivoAudioSerTocado = audioLagoaQuatro
-        redirecionamento = "#mapa"
-    } else if(verificarPossuiPalavra(textoFaladoUsuario, palavrasConstrucaoHistorica)){
-        nomeArquivoAudioSerTocado = audioConstrucaoHistorica
-        redirecionamento = "#mapa"
-    } else if(verificarPossuiPalavra(textoFaladoUsuario, palavrasLagoaTres)){
-        nomeArquivoAudioSerTocado = audioLagoaTres
-        redirecionamento = "#mapa"
-    } else if(verificarPossuiPalavra(textoFaladoUsuario, palavrasReflorestamento)){
-        nomeArquivoAudioSerTocado = audioReflorestamento
-        redirecionamento = "#mapa"
-    } else if(verificarPossuiPalavra(textoFaladoUsuario, palavrasRuínas)){
-        nomeArquivoAudioSerTocado = audioRuinas
-        redirecionamento = "#mapa"
-    } else if(verificarPossuiPalavra(textoFaladoUsuario, palavrasFragmentoMata)){
-        nomeArquivoAudioSerTocado = audioFragmentoMata
-        redirecionamento = "#mapa"
-    } else if(verificarPossuiPalavra(textoFaladoUsuario, palavrasLagoaUm)){
-        nomeArquivoAudioSerTocado = audioLagoaUm
-        redirecionamento = "#mapa"
+        localRedirecionamento = "../html/contextualizacao-historica.html"
+        redirecionarOutraPagina = true
     }
-
-    await tocarArquivoAudio(new Audio(nomeArquivoAudioSerTocado))
     
-    if (redirecionamento){
-        window.location.href = redirecionamento
+    // Commenting this piece of code due to change of voice interaction to another page
+
+    // } else if(verificarPossuiPalavra(textoFaladoUsuario, palavrasLagoaQuatro)){
+    //     nomeArquivoAudioSerTocado = audioLagoaQuatro
+    //     localRedirecionamento = "#mapa"
+    //     redirecionarOutraPagina = false
+    // } else if(verificarPossuiPalavra(textoFaladoUsuario, palavrasConstrucaoHistorica)){
+    //     nomeArquivoAudioSerTocado = audioConstrucaoHistorica
+    //     localRedirecionamento = "#mapa"
+    //     redirecionarOutraPagina = false
+    // } else if(verificarPossuiPalavra(textoFaladoUsuario, palavrasLagoaTres)){
+    //     nomeArquivoAudioSerTocado = audioLagoaTres
+    //     localRedirecionamento = "#mapa"
+    //     redirecionarOutraPagina = false
+    // } else if(verificarPossuiPalavra(textoFaladoUsuario, palavrasReflorestamento)){
+    //     nomeArquivoAudioSerTocado = audioReflorestamento
+    //     localRedirecionamento = "#mapa"
+    //     redirecionarOutraPagina = false
+    // } else if(verificarPossuiPalavra(textoFaladoUsuario, palavrasRuínas)){
+    //     nomeArquivoAudioSerTocado = audioRuinas
+    //     localRedirecionamento = "#mapa"
+    //     redirecionarOutraPagina = false
+    // } else if(verificarPossuiPalavra(textoFaladoUsuario, palavrasFragmentoMata)){
+    //     nomeArquivoAudioSerTocado = audioFragmentoMata
+    //     localRedirecionamento = "#mapa"
+    //     redirecionarOutraPagina = false
+    // } else if(verificarPossuiPalavra(textoFaladoUsuario, palavrasLagoaUm)){
+    //     nomeArquivoAudioSerTocado = audioLagoaUm
+    //     localRedirecionamento = "#mapa"
+    //     redirecionarOutraPagina = false
+    // }
+
+    if(redirecionarOutraPagina){
+        await tocarArquivoAudio(new Audio(nomeArquivoAudioSerTocado))
+        window.location.href = localRedirecionamento
+    } else{
+        if(localRedirecionamento){
+            window.location.href = localRedirecionamento
+        }
+        tocarArquivoAudio(new Audio(nomeArquivoAudioSerTocado))
     }
 })
 
@@ -178,22 +206,10 @@ reconhecimentoVoz.addEventListener('audioend', function (){
 })
 
 function tocarArquivoAudio(arquivoAudio) {
-    console.log(arquivoAudio)
-    // const arquivoAudio = new Audio(nomeArquivoAudio)
-    // arquivoAudio.play()
-    return new Promise(res=>{
+    return new Promise(resposta =>{
         arquivoAudio.play()
-        arquivoAudio.onended = res
+        arquivoAudio.onended = resposta
       })
-    // const promise = arquivoAudio.play();
-    // if (promise !== undefined) { // On older browsers play() does not return anything, so the value would be undefined.
-    //     promise.then(() => {
-    //         console.log("audio tocando")
-    //     })
-    //     .catch(error => {
-    //         console.log(error);
-    //     });
-    // }
 }
 
 function verificarPossuiPalavra(textoFalado, listaPalavras){

@@ -1,4 +1,4 @@
-ScrollReveal().reveal(".texto-aspectos-humanos", {
+ScrollReveal().reveal(".texto-scroll-reveal", {
     delay: 250,
     duration: 600,
     easing: 'ease',
