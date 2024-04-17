@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mamíferos</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
+</head>
+<body>
+    <a class="botao-voltar text-dark text-decoration-none" href="especies-fauna.html">
+        <img src="../../assets/images/arrow-left-solid.svg" alt="Voltar" width="80px" height="80px">
+        <h2 class="ms-2"><strong>Voltar</strong></h2>
+    </a>
+
+    <div class="content-stack justify-content-center bg-brown text-dark">
+        <h1><strong>Mamíferos</strong></h1>
+        <div id="carouselMamiferos" class="carousel carousel-dark slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselMamiferos" data-bs-slide-to="0" class="active btn-indicator" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselMamiferos" data-bs-slide-to="1" class="btn-indicator" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselMamiferos" data-bs-slide-to="2" class="btn-indicator" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselMamiferos" data-bs-slide-to="3" class="btn-indicator" aria-label="Slide 4"></button>
+            </div>
+
+            <div class="carousel-inner p-4">
+                <div class="carousel-item active p-4">
+                    <div class="d-flex flex-column align-items-center">
+                        <h3>Capivara (Hydrochoerus hydrochaeris)</h3>
+                        <img src="../../assets/images/capivara.jpg" width="800px" height="600px" alt="Capivara">
+                    </div>
+                </div>
+
+                
+                <div class="carousel-item p-4">
+                    <div class="d-flex flex-column align-items-center">
+                        <h3>Gambá (Didelphis marsupialis)</h3>
+                        <img src="../../assets/images/gamba.jpeg" width="800px" height="600px" alt="Gambá">
+                    </div>
+                </div>
+
+                <div class="carousel-item p-4">
+                    <div class="d-flex flex-column align-items-center">
+                        <h3>Tatu (Dasypus novemcinctus)</h3>
+                        <img src="../../assets/images/tatu2.jpg" width="800px" height="600px" alt="Tatu">
+                    </div>
+                </div>
+
+                <div class="carousel-item p-4">
+                    <div class="d-flex flex-column align-items-center">
+                        <h3>Sagui (Callithrix jacchus)</h3>
+                        <img src="../../assets/images/sagui.jpeg" width="800px" height="600px" alt="Sagui">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselMamiferos" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselMamiferos" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+    <script src="../bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>

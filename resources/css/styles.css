@@ -76,4 +76,31 @@ body {
     color: white;
 }
 
+.carousel-control-next, .carousel-control-prev {
+    top: 50% !important;
+    bottom: 50% !important;
+    opacity: 1 !important;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon{
+    width: 10rem !important;
+    height: 10rem !important;
+}
+
+.carousel-indicators {
+    margin-bottom: -2rem !important;
+}
+
+.btn-indicator {
+    width: 10rem !important;
+    height: 10px !important;
+}
+
+span.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='black'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/></svg>") ;
+  }
+  
+span.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='black'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/></svg>") ; 
+} 
 

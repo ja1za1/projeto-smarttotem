@@ -7,63 +7,76 @@
     <title>Espécies de Flora</title>
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
-    <script src="../js/scrollreveal.js"></script>
 </head>
 <body>
 
-    <a class="botao-voltar text-dark text-decoration-none" href="aspectos-naturais.html">
+    <a class="botao-voltar text-white text-decoration-none" href="aspectos-naturais.html">
         <img src="../../assets/images/arrow-left-solid.svg" alt="Voltar" width="80px" height="80px">
         <h2 class="ms-2"><strong>Voltar</strong></h2>
     </a>
 
     <div class="content-stack justify-content-center bg-success text-white">
-        <div class="container texto-scroll-reveal">
-            <p class="fs-2" style="text-align: justify;">Foram encontradas 21 espécies, pertencentes a 18 gêneros e 14 famílias. A maioria são pioneiras, o que indica que a floresta está pouco avançada no processo de sucessão ecológica. Veja mais em: </p>
-            <div class="d-flex flex-row gap-3 p-5 mt-5">
-                <a href="#pioneiras" class="btn btn-primary fs-2 w-50 p-3">
-                    Pioneiras
-                </a>
 
-                <a href="#secundarias" class="btn btn-primary fs-2 w-50 p-3">
-                    Secundárias e clímax
-                </a>
+        <div id="carouselFlora" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselFlora" data-bs-slide-to="0" class="active btn-indicator" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselFlora" data-bs-slide-to="1" class="btn-indicator" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselFlora" data-bs-slide-to="2" class="btn-indicator" aria-label="Slide 3"></button>
+            </div>
+
+            <div class="carousel-inner p-4">
+                <div class="carousel-item active p-4">
+                    <div class="container ">
+                        <p class="fs-2" style="text-align: justify;">Foram encontradas 21 espécies, pertencentes a 18 gêneros e 14 famílias. A maioria são pioneiras, o que indica que a floresta está pouco avançada no processo de sucessão ecológica.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item p-4">
+                    <div class="container " style="text-align: justify;">
+                        <div class="row row-cols-2">
+                            <div class="col">
+                                <video src="../../assets/videos/especies-pioneiras.mp4" controls disablePictureInPicture controlsList="nofullscreen nodownload noremoteplayback" width="600px" height="500px"></video>
+                            </div>
+            
+                            <div class="col d-flex flex-column align-items-center fs-3 word-break" style="text-align: justify;">
+                                <h1 class="mb-4" style="font-size: 3rem;"><strong>Pioneiras</strong></h1> 
+                                <p>Espécies pioneiras são organismos vegetais que são os primeiros a colonizar ecossistemas recém-criados ou áreas perturbadas, como terrenos vulcânicos recentemente solidificados, áreas desmatadas, terrenos pós-incêndio ou locais onde houve alguma destruição natural. Essas plantas têm características adaptativas que lhes permitem crescer em condições adversas, como solos pobres, com poucos nutrientes e pouca umidade.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item p-4">
+                    <div class="container " style="text-align: justify;">
+                        <div class="row row-cols-2 g-5">
+                            <div class="col">
+                                <video src="../../assets/videos/especies-secundarias.mp4" controls disablePictureInPicture controlsList="nofullscreen nodownload noremoteplayback" width="600px" height="500px"></video>
+                            </div>
+
+                            <div class="col d-flex flex-column align-items-center fs-3 word-break" style="text-align: justify;">
+                                <h1 class="mb-4" style="font-size: 3rem;"><strong>Secundárias e Clímax</strong></h1> 
+                                <p>Espécies secundárias são plantas que sucedem as espécies pioneiras durante o processo de sucessão ecológica. Elas se estabelecem e crescem em áreas onde as condições do solo e do ambiente foram modificadas pelas espécies pioneiras. Geralmente, as espécies secundárias são mais tolerantes a condições de sombra, competição por recursos e têm necessidades mais específicas em relação ao solo e ao ambiente do que as espécies pioneiras.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselFlora" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselFlora" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+        
     </div>
 
-    <div id="pioneiras" class="content-stack justify-content-center bg-white text-dark">
-        <div class="container texto-scroll-reveal" style="text-align: justify;">
-            <div class="row row-cols-2">
-                <div class="col">
-                    <video src="../../assets/videos/especies-pioneiras.mp4" controls disablePictureInPicture controlsList="nofullscreen nodownload noremoteplayback" width="600px" height="500px"></video>
-                </div>
 
-                <div class="col d-flex flex-column align-items-center fs-4 word-break texto-scroll-reveal" style="text-align: justify;">
-                    <h1 class="mb-4" style="font-size: 3rem;"><strong>Pioneiras</strong></h1> 
-                    <p>Espécies pioneiras são organismos vegetais que são os primeiros a colonizar ecossistemas recém-criados ou áreas perturbadas, como terrenos vulcânicos recentemente solidificados, áreas desmatadas, terrenos pós-incêndio ou locais onde houve alguma destruição natural. Essas plantas têm características adaptativas que lhes permitem crescer em condições adversas, como solos pobres, com poucos nutrientes e pouca umidade.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="secundarias" class="content-stack justify-content-center bg-secondary text-dark">
-        <div class="container texto-scroll-reveal" style="text-align: justify;">
-            <div class="row row-cols-2 g-5">
-                <div class="col d-flex flex-column align-items-center fs-4 word-break texto-scroll-reveal text-white" style="text-align: justify;">
-                    <h1 class="mb-4" style="font-size: 3rem;"><strong>Secundárias e Clímax</strong></h1> 
-                    <p>Espécies secundárias são plantas que sucedem as espécies pioneiras durante o processo de sucessão ecológica. Elas se estabelecem e crescem em áreas onde as condições do solo e do ambiente foram modificadas pelas espécies pioneiras. Geralmente, as espécies secundárias são mais tolerantes a condições de sombra, competição por recursos e têm necessidades mais específicas em relação ao solo e ao ambiente do que as espécies pioneiras.</p>
-                </div>
-
-                <div class="col">
-                    <video src="../../assets/videos/especies-secundarias.mp4" controls disablePictureInPicture controlsList="nofullscreen nodownload noremoteplayback" width="600px" height="500px"></video>
-                </div>
-            </div>
-        </div>
-    </div>
 
     
     <script src="../bootstrap/bootstrap.bundle.min.js"></script>
-    <script src="../js/scrollreveal-config.js"></script>
     <script src="../js/player-video.js"></script>
     
 </body>

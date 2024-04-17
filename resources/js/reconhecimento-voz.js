@@ -89,97 +89,92 @@ botaoConfirmouFala.addEventListener('click', async () => {
     var textoFaladoUsuario = textoConfirmacaoFala.innerHTML
     let nomeArquivoAudioSerTocado = audioRespostaPadrao
     let localRedirecionamento = ""
-    let redirecionarOutraPagina = false
+    let redirecionarMapa = false
 
     if (verificarPossuiPalavra(textoFaladoUsuario, palavrasEducacaoAmbiental)) {
         nomeArquivoAudioSerTocado = audioEducacaoAmbiental
         localRedirecionamento = "../html/educacao-ambiental.html"
-        redirecionarOutraPagina = true
+        redirecionarMapa = false
     } else if (verificarPossuiPalavra(textoFaladoUsuario, palavrasSucessaoEcologica)){
         nomeArquivoAudioSerTocado = audioSucessaoEcologia
         localRedirecionamento = "../html/sucessao-ecologica.html"
-        redirecionarOutraPagina = true
+        redirecionarMapa = false
     } else if (verificarPossuiPalavra(textoFaladoUsuario, palavrasIncendio)){
         nomeArquivoAudioSerTocado = audioIncendio
         localRedirecionamento = "../html/incendio-criminoso.html"
-        redirecionarOutraPagina = true
+        redirecionarMapa = false
     } else if (verificarPossuiPalavra(textoFaladoUsuario, palavrasAtividadeHumana)){
         nomeArquivoAudioSerTocado = audioAtividadeHumana
         localRedirecionamento = "../html/atividades-humanas.html"
-        redirecionarOutraPagina = true
+        redirecionarMapa = false
     } else if (verificarPossuiPalavra(textoFaladoUsuario, palavrasQualidadeAgua)){
         nomeArquivoAudioSerTocado = audioQualidadeAgua
         localRedirecionamento = "../html/classificacao-agua.html"
-        redirecionarOutraPagina = true
+        redirecionarMapa = false
     } else if (verificarPossuiPalavra(textoFaladoUsuario, palavrasEspecieArborea)){
         nomeArquivoAudioSerTocado = audioEspecieArborea
         localRedirecionamento = "../html/especies-arboreas.html"
-        redirecionarOutraPagina = true
+        redirecionarMapa = false
     } else if (verificarPossuiPalavra(textoFaladoUsuario, palavrasEspecieFlora)){
         nomeArquivoAudioSerTocado = audioEspecieFlora
         localRedirecionamento = "../html/especies-flora-mapa.html"
-        redirecionarOutraPagina = true
+        redirecionarMapa = false
     } else if (verificarPossuiPalavra(textoFaladoUsuario, palavrasClassificacaoGeologica)){
         nomeArquivoAudioSerTocado = audioClassificacaoGeologica
         localRedirecionamento = "../html/classificacao-geologica.html"
-        redirecionarOutraPagina = true
+        redirecionarMapa = false
     } else if (verificarPossuiPalavra(textoFaladoUsuario, palavrasEspecieFauna)){
         nomeArquivoAudioSerTocado = audioEspecieFauna
         localRedirecionamento = "../html/especies-fauna.html"
-        redirecionarOutraPagina = true
+        redirecionarMapa = false
     } else if (verificarPossuiPalavra(textoFaladoUsuario, palavrasBioma)){
         nomeArquivoAudioSerTocado = audioBioma
         localRedirecionamento = "../html/bioma-mata-atlantica.html"
-        redirecionarOutraPagina = true
+        redirecionarMapa = false
     } else if (verificarPossuiPalavra(textoFaladoUsuario, palavrasClima)){
         nomeArquivoAudioSerTocado = audioClima
         localRedirecionamento = "../html/clima-cidade.html"
-        redirecionarOutraPagina = true
+        redirecionarMapa = false
     } else if(verificarPossuiPalavra(textoFaladoUsuario, palavrasContextoHistorico)){
         nomeArquivoAudioSerTocado = audioContextoHistorico
         localRedirecionamento = "../html/contextualizacao-historica.html"
-        redirecionarOutraPagina = true
+        redirecionarMapa = false
+    } else if(verificarPossuiPalavra(textoFaladoUsuario, palavrasLagoaQuatro)){
+        nomeArquivoAudioSerTocado = audioLagoaQuatro
+        localRedirecionamento = "../html/mapa.html"
+        redirecionarMapa = true
+    } else if(verificarPossuiPalavra(textoFaladoUsuario, palavrasConstrucaoHistorica)){
+        nomeArquivoAudioSerTocado = audioConstrucaoHistorica
+        localRedirecionamento = "../html/mapa.html"
+        redirecionarMapa = true
+    } else if(verificarPossuiPalavra(textoFaladoUsuario, palavrasLagoaTres)){
+        nomeArquivoAudioSerTocado = audioLagoaTres
+        localRedirecionamento = "../html/mapa.html"
+        redirecionarMapa = true
+    } else if(verificarPossuiPalavra(textoFaladoUsuario, palavrasReflorestamento)){
+        nomeArquivoAudioSerTocado = audioReflorestamento
+        localRedirecionamento = "../html/mapa.html"
+        redirecionarMapa = true
+    } else if(verificarPossuiPalavra(textoFaladoUsuario, palavrasRuínas)){
+        nomeArquivoAudioSerTocado = audioRuinas
+        localRedirecionamento = "../html/mapa.html"
+        redirecionarMapa = true
+    } else if(verificarPossuiPalavra(textoFaladoUsuario, palavrasFragmentoMata)){
+        nomeArquivoAudioSerTocado = audioFragmentoMata
+        localRedirecionamento = "../html/mapa.html"
+        redirecionarMapa = true
+    } else if(verificarPossuiPalavra(textoFaladoUsuario, palavrasLagoaUm)){
+        nomeArquivoAudioSerTocado = audioLagoaUm
+        localRedirecionamento = "../html/mapa.html"
+        redirecionarMapa = true
     }
-    
-    // Commenting this piece of code due to change of voice interaction to another page
 
-    // } else if(verificarPossuiPalavra(textoFaladoUsuario, palavrasLagoaQuatro)){
-    //     nomeArquivoAudioSerTocado = audioLagoaQuatro
-    //     localRedirecionamento = "#mapa"
-    //     redirecionarOutraPagina = false
-    // } else if(verificarPossuiPalavra(textoFaladoUsuario, palavrasConstrucaoHistorica)){
-    //     nomeArquivoAudioSerTocado = audioConstrucaoHistorica
-    //     localRedirecionamento = "#mapa"
-    //     redirecionarOutraPagina = false
-    // } else if(verificarPossuiPalavra(textoFaladoUsuario, palavrasLagoaTres)){
-    //     nomeArquivoAudioSerTocado = audioLagoaTres
-    //     localRedirecionamento = "#mapa"
-    //     redirecionarOutraPagina = false
-    // } else if(verificarPossuiPalavra(textoFaladoUsuario, palavrasReflorestamento)){
-    //     nomeArquivoAudioSerTocado = audioReflorestamento
-    //     localRedirecionamento = "#mapa"
-    //     redirecionarOutraPagina = false
-    // } else if(verificarPossuiPalavra(textoFaladoUsuario, palavrasRuínas)){
-    //     nomeArquivoAudioSerTocado = audioRuinas
-    //     localRedirecionamento = "#mapa"
-    //     redirecionarOutraPagina = false
-    // } else if(verificarPossuiPalavra(textoFaladoUsuario, palavrasFragmentoMata)){
-    //     nomeArquivoAudioSerTocado = audioFragmentoMata
-    //     localRedirecionamento = "#mapa"
-    //     redirecionarOutraPagina = false
-    // } else if(verificarPossuiPalavra(textoFaladoUsuario, palavrasLagoaUm)){
-    //     nomeArquivoAudioSerTocado = audioLagoaUm
-    //     localRedirecionamento = "#mapa"
-    //     redirecionarOutraPagina = false
-    // }
-
-    if(redirecionarOutraPagina){
+    if(redirecionarMapa){
+        window.location.href = `${localRedirecionamento}?audio=${nomeArquivoAudioSerTocado}`
+    } else if(localRedirecionamento){
         await tocarArquivoAudio(new Audio(nomeArquivoAudioSerTocado))
         window.location.href = localRedirecionamento
     } else{
-        if(localRedirecionamento){
-            window.location.href = localRedirecionamento
-        }
         tocarArquivoAudio(new Audio(nomeArquivoAudioSerTocado))
     }
 })
