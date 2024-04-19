@@ -10,7 +10,7 @@
 
 </head>
 <body>
-    <div class="content-stack bg-brown text-dark">
+    <div class="content-stack justify-content-center bg-brown text-dark">
 
         <a class="botao-voltar text-dark text-decoration-none" href="../../index.html">
             <img src="../../assets/images/arrow-left-solid.svg" alt="Voltar" width="80px" height="80px">
@@ -26,7 +26,7 @@
                 <p>Saiba mais sobre a reserva ambiental Ponto de Partida. Toque em uma das imagens abaixo para entender um pouco mais sobre cada assunto.</p>
             </div>
             
-            <div class="d-flex flex-row align-items-center justify-content-between text-white" style="margin-top: 5rem;">
+            <div class="d-flex flex-row align-items-center justify-content-between text-white mt-5">
                 <a href="aspectos-naturais.html" class="d-flex flex-row align-items-center text-decoration-none text-white justify-content-center imagem-card shadow-lg-custom" style="background-image: url(../../assets/images/imagem-sapo.jpeg);">
                     <h2>Aspectos naturais</h2>
                 </a>
@@ -40,9 +40,38 @@
                 </a>
             </div>
         </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="modalConfirmacao" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-2 text-dark">Você disse isso?</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body text-dark d-flex flex-row justify-content-center">
+                        <p class="fs-3" id="confirmacaoTexto"></p>
+                    </div>
+
+                    <div class="modal-footer d-flex flex-row justify-content-evenly">
+                        <button type="button" class="btn btn-secondary w-25 fs-3" data-bs-dismiss="modal">Não</button>
+                        <button type="button" class="btn btn-primary w-25 fs-3" id="botaoConfirmouTexto">Sim</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="p-2 d-flex flex-column align-items-center position-absolute" style="right: 3%; bottom: 1%;">
+            <button class="d-flex flex-row align-items-center justify-content-center rounded-circle" style="width: 112px; height: 112px;"><img src="../../assets/images/microfone.png" id="btn-reconhecer-voz" width="60%"></button>
+            <div class="mt-2 text-dark">
+                <h3 class="invisible blink" id="gravando-pergunta-voz">Gravando...</h3>
+            </div>
+        </div>
     </div>
 
     <script src="../bootstrap/bootstrap.bundle.min.js"></script>
     <script src="../js/scrollreveal-config.js"></script>
+    <script src="../js/reconhecimento-voz.js"></script>
 </body>
 </html>

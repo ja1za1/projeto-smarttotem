@@ -3,32 +3,29 @@ function getParametro(nomeParametro) {
     const parametrosUrl = new URLSearchParams(url);
     return parametrosUrl.get(nomeParametro);
 }
-
-window.onload = function() {
     // Verifica se há um parâmetro na URL
-    const parametro = getParametro('local');
+const parametro = getParametro('local');
 
-    if (parametro) {
-        fetch(`../json/${parametro}.json`)
-        .then(resposta => resposta.json())
-        .then(conteudoJson => {
-            const dadosLocal = conteudoJson.informacoes
+if (parametro) {
+    fetch(`../json/${parametro}.json`)
+    .then(resposta => resposta.json())
+    .then(conteudoJson => {
+        const dadosLocal = conteudoJson.informacoes
 
-            document.getElementById('titulo-local').innerHTML = dadosLocal.titulo
-            document.getElementById('texto-local').innerHTML = dadosLocal.texto
+        document.getElementById('titulo-local').innerHTML = dadosLocal.titulo
+        document.getElementById('texto-local').innerHTML = dadosLocal.texto
 
-            if(dadosLocal.tipo == "local"){
-                document.getElementById('imagem-local').style.height = '600px'
-                document.getElementById('imagem-local').classList.add('w-100')
-            }
-            else{
-                document.getElementById('imagem-local').style.height = '700px'
-                document.getElementById('imagem-local').classList.add('w-75')
-            }
-            document.getElementById('imagem-local').src = dadosLocal.imagem
+        if(dadosLocal.tipo == "local"){
+            document.getElementById('imagem-local').style.height = '600px'
+            document.getElementById('imagem-local').classList.add('w-100')
+        }
+        else{
+            document.getElementById('imagem-local').style.height = '700px'
+            document.getElementById('imagem-local').classList.add('w-75')
+        }
+        document.getElementById('imagem-local').src = dadosLocal.imagem
         })
-    } else{
-        document.getElementById('texto-local').innerHTML = 'Houve um erro ao carregar a página'
-    }
+} else{
+    document.getElementById('texto-local').innerHTML = 'Houve um erro ao carregar a página'
 }
 

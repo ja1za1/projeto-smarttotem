@@ -10,14 +10,14 @@
 </head>
 <body>
 
-    <a class="botao-voltar text-white text-decoration-none" href="../../index.html">
+    <div class="botao-voltar text-white" onclick="javascript:history.back()">
         <img src="../../assets/images/arrow-left-solid.svg" alt="Voltar" width="80px" height="80px">
         <h2 class="ms-2"><strong>Voltar</strong></h2>
-    </a>
+    </div>
 
     <div class="content-stack bg-primary text-white ">
         <h1 class="mb-3 texto-scroll-reveal">Interação por Voz</h1>
-        <div class="d-flex flex-column align-items-center justify-content-center mt-5 p-2">
+        <div class="d-flex flex-column align-items-center justify-content-center mt-2 p-2">
             <div class="fs-4 text-break w-75 texto-scroll-reveal">
                 <p>Experimente a interação por voz com o nosso totem inteligente.</p>
                 <h2>Como funciona?</h2>
@@ -30,6 +30,10 @@
                     <li>Quais tipos de animais existem nessa reserva?</li>
                     <li>Qual a história dessa reserva?</li>
                     <li>O que é sucessão ecológica?</li>
+                </ul>
+                <h2>Fique ligado</h2>
+                <ul>
+                    <li>Sempre que o botão abaixo aparecer, a interação por voz está disponível. Vamos fazer um teste?</li>
                 </ul>
             </div>
 
@@ -64,7 +68,7 @@
         </div>
 
         <div class="d-flex flex-column align-items-center position-absolute" style="right: 15%; bottom: 5%;">
-            <p class="fs-4">Reproduzir texto em aúdio</p>
+            <p id="texto-reproduzir" style="width: 283px;" class="fs-4 text-center">Reproduzir texto em aúdio</p>
             <button class="d-flex flex-row align-items-center justify-content-center rounded-circle" id="btn-reproduzir-som" style="width: 112px; height: 112px;"><img src="../../assets/images/som.png" id="imagem-botao-reproduzir-audio" width="60%"></button>
         </div>
     </div>
@@ -72,6 +76,6 @@
     <script src="../bootstrap/bootstrap.bundle.min.js"></script>
     <script src="../js/reconhecimento-voz.js"></script>
     <script src="../js/scrollreveal-config.js"></script>
-    <script src="../js/reproduzir-texto-interacao-voz.js"></script>
+    <script src="../js/reproduzir-texto.js"></script>
 </body>
 </html>

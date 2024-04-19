@@ -10,17 +10,17 @@
 </head>
 <body>
 
-    <a class="botao-voltar text-dark text-decoration-none" href="aspectos-naturais.html">
+    <div class="botao-voltar text-dark" onclick="javascript:history.back()">
         <img src="../../assets/images/arrow-left-solid.svg" alt="Voltar" width="80px" height="80px">
         <h2 class="ms-2"><strong>Voltar</strong></h2>
-    </a>
+    </div>
 
     <div class="content-stack bg-brown text-dark justify-content-center">
 
-        <div id="carouselGeologica" class="carousel carousel-dark slide">
+        <div id="carrosel" class="carousel carousel-dark slide">
             <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselGeologica" data-bs-slide-to="0" class="active btn-indicator" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselGeologica" data-bs-slide-to="1" class="btn-indicator" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carrosel" data-bs-slide-to="0" class="active btn-indicator" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carrosel" data-bs-slide-to="1" class="btn-indicator" aria-label="Slide 2"></button>
             </div>
 
             <div class="carousel-inner p-4">
@@ -57,16 +57,22 @@
                 </div>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselGeologica" data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#carrosel" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselGeologica" data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#carrosel" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
+
+        <div class="d-flex flex-column align-items-center position-absolute" style="right: 5%; bottom: 1%;">
+            <p id="texto-reproduzir" class="fs-4 text-center" style="width: 283px;">Reproduzir texto em aúdio</p>
+            <button class="d-flex flex-row align-items-center justify-content-center rounded-circle" id="btn-reproduzir-som" style="width: 112px; height: 112px;"><img src="../../assets/images/som.png" id="imagem-botao-reproduzir-audio" width="60%"></button>
+        </div>
     </div>
 
     <script src="../bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../js/reproduzir-texto.js"></script>
 </body>
 </html>

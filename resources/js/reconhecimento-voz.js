@@ -36,6 +36,33 @@ const palavrasFragmentoMata = ["fragmento", "mata atlântica"]
 
 const palavrasLagoaUm = ["lagoa 1", "Lagoa 1"]
 
+const plantas = {
+    "camboatá" : "../html/template.html?local=camboata",
+    "abacateiro" : "../html/template.html?local=abacateiro",
+    "lavanda" : "../html/template.html?local=lavanda",
+    "quaresmeira" : "../html/template.html?local=quaresmeira",
+    "sangra d'água" : "../html/template.html?local=sangra-dagua",
+    "sangra" : "../html/template.html?local=sangra-dagua",
+    "d'água" : "../html/template.html?local=sangra-dagua",
+    "bordo da noruega" : "../html/template.html?local=bordo-da-noruega",
+    "bordo" : "../html/template.html?local=bordo-da-noruega",
+    "noruega" : "../html/template.html?local=bordo-da-noruega",
+    "aroeira vermelha" : "../html/template.html?local=aroeira-vermelha",
+    "aroeira" : "../html/template.html?local=aroeira-vermelha",
+    "vermelha" : "../html/template.html?local=aroeira-vermelha",
+    "ipê tabaco" : "../html/template.html?local=ipe-tabaco",
+    "ipê" : "../html/template.html?local=ipe-tabaco",
+    "tabaco" : "../html/template.html?local=ipe-tabaco",
+    "vassourão" : "../html/template.html?local=vassourao",
+    "cafezinho do mato" : "../html/template.html?local=cafezinho-do-mato",
+    "cafezinho" : "../html/template.html?local=cafezinho-do-mato",
+    "cafézinho" : "../html/template.html?local=cafezinho-do-mato",
+    "jacarandá paulista" : "../html/template.html?local=jacaranda-paulista",
+    "jacarandá" : "../html/template.html?local=jacaranda-paulista",
+    "jacaranda paulista" : "../html/template.html?local=jacaranda-paulista",
+    "jacaranda" : "../html/template.html?local=jacaranda-paulista",
+}
+
 
 const botaoFalar = document.getElementById("btn-reconhecer-voz")
 const botaoConfirmouFala = document.getElementById("botaoConfirmouTexto")
@@ -63,6 +90,7 @@ const audioReflorestamento = "../../assets/audios/areas-reflorestamento.mp3"
 const audioRuinas = "../../assets/audios/ruinas.mp3"
 const audioFragmentoMata = "../../assets/audios/fragmento-mata-atlantica.mp3"
 const audioLagoaUm = "../../assets/audios/lagoa1.mp3"
+const audioPlantas = "../../assets/audios/audio-plantas.mp3"
 
 //Verifica qual biblioteca está sendo utilizada pelo navagedor
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -90,8 +118,12 @@ botaoConfirmouFala.addEventListener('click', async () => {
     let nomeArquivoAudioSerTocado = audioRespostaPadrao
     let localRedirecionamento = ""
     let redirecionarMapa = false
-
-    if (verificarPossuiPalavra(textoFaladoUsuario, palavrasEducacaoAmbiental)) {
+    let plantaFalada = verificarFalouPlanta(textoFaladoUsuario)
+    if (plantaFalada){
+        nomeArquivoAudioSerTocado = audioPlantas
+        localRedirecionamento = plantas[plantaFalada]
+        redirecionarMapa = false
+    } else if (verificarPossuiPalavra(textoFaladoUsuario, palavrasEducacaoAmbiental)) {
         nomeArquivoAudioSerTocado = audioEducacaoAmbiental
         localRedirecionamento = "../html/educacao-ambiental.html"
         redirecionarMapa = false
@@ -209,4 +241,15 @@ function tocarArquivoAudio(arquivoAudio) {
 
 function verificarPossuiPalavra(textoFalado, listaPalavras){
     return listaPalavras.some(palavra => textoFalado.includes(palavra))
+}
+
+function verificarFalouPlanta(textoFalado){
+    palavras = textoFalado.split(' ')
+    for (palavra of palavras){
+        palavaraMinusculo = palavra.toLowerCase()
+        if (palavaraMinusculo in plantas){
+            return palavaraMinusculo
+        }
+    }
+    return null
 }

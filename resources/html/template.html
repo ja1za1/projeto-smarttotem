@@ -9,10 +9,10 @@
     <script src="../js/scrollreveal.js"></script>
 </head>
 <body>
-    <a class="botao-voltar text-dark text-decoration-none" href="mapa.html">
+    <div class="botao-voltar text-dark" onclick="javascript:history.back()">
         <img src="../../assets/images/arrow-left-solid.svg" alt="Voltar" width="80px" height="80px">
         <h2 class="ms-2"><strong>Voltar</strong></h2>
-    </a>
+    </div>
 
     <div class="content-stack justify-content-center bg-success text-white">
         <div class="container texto-scroll-reveal" style="margin-top: 7rem;">
@@ -27,10 +27,15 @@
                 </div>
             </div>
         </div>
+        <div class="d-flex flex-column align-items-center position-absolute texto-scroll-reveal" style="right: 15%; bottom: 5%;">
+            <p id="texto-reproduzir" style="width: 283px;" class="fs-4 text-center">Reproduzir texto em aúdio</p>
+            <button class="d-flex flex-row align-items-center justify-content-center rounded-circle" id="btn-reproduzir-som" style="width: 112px; height: 112px;"><img src="../../assets/images/som.png" id="imagem-botao-reproduzir-audio" width="60%"></button>
+        </div>
     </div>
 
     <script src="../js/template.js"></script>
     <script src="../bootstrap/bootstrap.bundle.min.js"></script>
     <script src="../js/scrollreveal-config.js"></script>
+    <script src="../js/reproduzir-texto.js"></script>
 </body>
 </html>
