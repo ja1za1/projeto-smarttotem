@@ -20,7 +20,8 @@
             <h1 class="texto-scroll-reveal"><strong>Mapa</strong></h1>
             <p class="fs-2 word-break texto-scroll-reveal">Toque em qualquer local ou planta do mapa para obter mais informações.</p>
             
-            <img src="../../assets/images/mapa.png" usemap="#image-map" class="w-100" alt="Mapa da Estação Sericícola">
+            <canvas id='canvas-imagem' class="visually-hidden" width='1296px' height='824px'></canvas>
+            <img id="imagem-mapa" src="../../assets/images/mapa.png" usemap="#image-map" class="w-100" alt="Mapa da Estação Sericícola">
             <map name="image-map">
                 <area target="_self" alt="Lagoa 4" title="Lagoa 4" href="template.html?local=lagoa4" coords="170,501,75" shape="circle">
                 <area target="_self" alt="Construção Histórica" title="Construção Histórica" href="template.html?local=construcao-historica" coords="168,346,75" shape="circle">

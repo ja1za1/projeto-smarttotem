@@ -1,42 +1,160 @@
-const palavrasEducacaoAmbiental = ["educação ambiental", "sustentabilidade", "reciclagem", "conservação", "ecossistema", "biodiversidade", "poluição", "desenvolvimento sustentável", "energia renovável", "preservação", "ecologia", "redução de resíduos"]
+const educacaoAmbiental = {
+    "palavras" : ["educação ambiental", "sustentabilidade", "reciclagem", "conservação", "ecossistema", "biodiversidade", "poluição", "desenvolvimento sustentável", "energia renovável", "preservação", "ecologia", "redução de resíduos"],
+    "audio" : "../../assets/audios/educacao-ambiental.mp3",
+    "pagina" : "../html/educacao-ambiental.html",
+    "mapa" : false
+}
 
-const palavrasSucessaoEcologica = ["sucessão ecológica", "ecese", "organismos pioneiros"]
+const sucessaoEcologica = {
+    "palavras" : ["sucessão ecológica", "ecese", "organismos pioneiros"],
+    "audio" : "../../assets/audios/sucessao-ecologica.mp3",
+    "pagina" : "../html/sucessao-ecologica.html",
+    "mapa" : false
+}
 
-const palavrasIncendio = ["incêndio", "fogo", "queimada", "queimadas", "chamas", "incêndio florestal", "ignição", "devastação", "fogaréu"]
+const incendio = {
+    "palavras" : ["incêndio", "fogo", "queimada", "queimadas", "chamas", "incêndio florestal", "ignição", "devastação", "fogaréu"],
+    "audio" : "../../assets/audios/incendio.mp3",
+    "pagina" : "../html/incendio-criminoso.html",
+    "mapa" : false
+}
 
-const palavrasAtividadeHumana = ["atividade humana", "intervenção humana", "ações humanas", "humana", "humanos"]
+const atividadeHumana = {
+    "palavras" : ["atividade humana", "intervenção humana", "ações humanas", "humana", "humanos"],
+    "audio" : "../../assets/audios/atividades-humanas.mp3",
+    "pagina" : "../html/atividades-humanas.html",
+    "mapa" : false
+}
 
-const palavrasQualidadeAgua = ["qualidade da água", "água", "água potável", "beber água", "consumir água"]
+const qualidadeAgua = {
+    "palavras" : ["qualidade da água", "água", "água potável", "beber água", "consumir água"],
+    "audio" : "../../assets/audios/qualidade-agua.mp3",
+    "pagina" : "../html/classificacao-agua.html",
+    "mapa" : false
+}
 
-const palavrasEspecieArborea = ["classificação arbórea", "classificação árvores", "arbórea", "pioneiras", "secundárias", "clímax"]
+const classificacaoArborea = {
+    "palavras" : ["classificação arbórea", "classificação árvores", "arbórea", "pioneiras", "secundárias", "clímax"],
+    "audio" : "../../assets/audios/classificacao-arborea.mp3",
+    "pagina" : "../html/especies-arboreas.html",
+    "mapa" : false
+}
 
-const palavrasEspecieFlora = ["espécies de flora", ,"espécies de Flora", "tipos de plantas", "flora", "espécies de planta", "árvores", "árvore"]
+const especieFlora = {
+    "palavras" : ["espécies de flora", "espécies de Flora", "tipos de plantas", "flora", "espécies de planta", "árvores", "árvore"],
+    "audio" : "../../assets/audios/especies-flora.mp3",
+    "pagina" : "../html/especies-flora.html",
+    "mapa" : false
+}
 
-const palavrasClassificacaoGeologica = ["classificação geológica", "classificação solo", "análise do solo", "análise solo", "geologia", "topografia", "solo"]
+const classificacaoGeologica = {
+    "palavras" : ["classificação geológica", "classificação solo", "análise do solo", "análise solo", "geologia", "topografia", "solo"],
+    "audio" : "../../assets/audios/classificacao-geologica.mp3",
+    "pagina" : "../html/classificacao-geologica.html",
+    "mapa" : false
+}
 
-const palavrasEspecieFauna = ["espécies de fauna", "fauna", "animais", "aves", "mamíferos", "répteis", "anfíbios", "passarinho", "passarinhos", "capivara", "tipo de animais", "tipos de animais", "sapo", "cobra", "tipo de animal", "animal"]
+const especieFauna = {
+    "palavras" : ["espécies de fauna", "fauna", "animais", "aves", "mamíferos", "répteis", "anfíbios", "passarinho", "passarinhos", "capivara", "tipo de animais", "tipos de animais", "sapo", "cobra", "tipo de animal", "animal"],
+    "audio" : "../../assets/audios/especies-fauna.mp3",
+    "pagina" : "../html/especies-fauna.html",
+    "mapa" : false
+}
 
-const palavrasBioma = ["bioma", "vegetação", "fragmento florestal"]
+const bioma = {
+    "palavras" : ["bioma", "vegetação", "fragmento florestal"],
+    "audio" : "../../assets/audios/bioma.mp3",
+    "pagina" : "../html/bioma-mata-atlantica.html",
+    "mapa" : false
+}
 
-const palavrasClima = ["clima", "úmido"]
+const clima = {
+    "palavras" : ["clima", "úmido"],
+    "audio" : "../../assets/audios/clima.mp3",
+    "pagina" : "../html/clima-cidade.html",
+    "mapa" : false
+}
 
-const palavrasContextoHistorico = ["contexto histórico", "história", "estação sericícola", "seda", "bituca"]
+const contextoHistorico = {
+    "palavras" : ["contexto histórico", "história", "estação sericícola", "seda", "bituca"],
+    "audio" : "../../assets/audios/contexto-historico.mp3",
+    "pagina" : "../html/contextualizacao-historica.html",
+    "mapa" : false
+}
 
-const palavrasLagoaQuatro = ["lagoa 4", "Lagoa 4", "local mais próximo", "lugar mais próximo", "local mais perto", "lugar mais perto"]
+const lagoaQuatro = {
+    "palavras" : ["lagoa 4", "Lagoa 4", "local mais próximo", "lugar mais próximo", "local mais perto", "lugar mais perto"],
+    "audio" : "../../assets/audios/lagoa4.mp3",
+    "pagina" : "../html/mapa.html",
+    "mapa" : true
+}
 
-const palavrasConstrucaoHistorica = ["construção histórica", "construção"]
+const construcaoHistorica = {
+    "palavras" : ["construção histórica", "construção"],
+    "audio" : "../../assets/audios/construcao-historica.mp3",
+    "pagina" : "../html/mapa.html",
+    "mapa" : true
+}
 
-const palavrasLagoaTres = ["lagoa 3", "Lagoa 3"]
+const lagoaTres = {
+    "palavras" : ["lagoa 3", "Lagoa 3"],
+    "audio" : "../../assets/audios/lagoa3.mp3",
+    "pagina" : "../html/mapa.html",
+    "mapa" : true
+}
 
-const palavrasReflorestamento = ["reflorestamento", "Reflorestamento"]
+const reflorestamento = {
+    "palavras" : ["reflorestamento", "Reflorestamento"],
+    "audio" : "../../assets/audios/areas-reflorestamento.mp3",
+    "pagina" : "../html/mapa.html",
+    "mapa" : true
+}
 
-const palavrasRuínas = ["ruínas", "Ruínas"]
+const ruinas = {
+    "palavras" : ["ruínas", "Ruínas"],
+    "audio" : "../../assets/audios/ruinas.mp3",
+    "pagina" : "../html/mapa.html",
+    "mapa" : true
+}
 
-const palavrasFragmentoMata = ["fragmento", "mata atlântica"]
+const fragmentoMata = {
+    "palavras" : ["fragmento", "mata atlântica"],
+    "audio" : "../../assets/audios/fragmento-mata-atlantica.mp3",
+    "pagina" : "../html/mapa.html",
+    "mapa" : true
+}
 
-const palavrasLagoaUm = ["lagoa 1", "Lagoa 1"]
+const lagoaUm = {
+    "palavras" : ["lagoa 1", "Lagoa 1"],
+    "audio" : "../../assets/audios/lagoa1.mp3",
+    "pagina" : "../html/mapa.html",
+    "mapa" : true
 
-const plantas = {
+}
+
+const CONTEUDOS = [
+    lagoaUm,
+    fragmentoMata,
+    ruinas,
+    reflorestamento,
+    lagoaTres,
+    construcaoHistorica,
+    lagoaQuatro,
+    contextoHistorico,
+    clima,
+    bioma,
+    especieFauna,
+    classificacaoGeologica,
+    especieFlora,
+    classificacaoArborea,
+    qualidadeAgua,
+    atividadeHumana,
+    incendio,
+    sucessaoEcologica,
+    educacaoAmbiental
+]
+
+const PLANTAS = {
     "camboatá" : "../html/template.html?local=camboata",
     "abacateiro" : "../html/template.html?local=abacateiro",
     "lavanda" : "../html/template.html?local=lavanda",
@@ -63,33 +181,11 @@ const plantas = {
     "jacaranda" : "../html/template.html?local=jacaranda-paulista",
 }
 
-
 const botaoFalar = document.getElementById("btn-reconhecer-voz")
 const botaoConfirmouFala = document.getElementById("botaoConfirmouTexto")
 const textoConfirmacaoFala = document.getElementById("confirmacaoTexto")
 const modalConfirmacao = new bootstrap.Modal(document.getElementById("modalConfirmacao"))
-
-// const audioEducacaoAmbiental = "https://github.com/ja1za1/projeto-smarttotem/raw/main/audio/educacao-ambiental.mp3"
 const audioRespostaPadrao = "../../assets/audios/resposta-padrao.mp3"
-const audioEducacaoAmbiental = "../../assets/audios/educacao-ambiental.mp3"
-const audioSucessaoEcologia = "../../assets/audios/sucessao-ecologica.mp3"
-const audioIncendio = "../../assets/audios/incendio.mp3"
-const audioAtividadeHumana = "../../assets/audios/atividades-humanas.mp3"
-const audioQualidadeAgua = "../../assets/audios/qualidade-agua.mp3"
-const audioEspecieArborea = "../../assets/audios/classificacao-arborea.mp3"
-const audioEspecieFlora = "../../assets/audios/especies-flora.mp3"
-const audioClassificacaoGeologica = "../../assets/audios/classificacao-geologica.mp3"
-const audioEspecieFauna = "../../assets/audios/especies-fauna.mp3"
-const audioBioma = "../../assets/audios/bioma.mp3"
-const audioClima = "../../assets/audios/clima.mp3"
-const audioContextoHistorico = "../../assets/audios/contexto-historico.mp3"
-const audioLagoaQuatro = "../../assets/audios/lagoa4.mp3"
-const audioConstrucaoHistorica = "../../assets/audios/construcao-historica.mp3"
-const audioLagoaTres = "../../assets/audios/lagoa3.mp3"
-const audioReflorestamento = "../../assets/audios/areas-reflorestamento.mp3"
-const audioRuinas = "../../assets/audios/ruinas.mp3"
-const audioFragmentoMata = "../../assets/audios/fragmento-mata-atlantica.mp3"
-const audioLagoaUm = "../../assets/audios/lagoa1.mp3"
 const audioPlantas = "../../assets/audios/audio-plantas.mp3"
 
 //Verifica qual biblioteca está sendo utilizada pelo navagedor
@@ -119,86 +215,19 @@ botaoConfirmouFala.addEventListener('click', async () => {
     let localRedirecionamento = ""
     let redirecionarMapa = false
     let plantaFalada = verificarFalouPlanta(textoFaladoUsuario)
+
     if (plantaFalada){
         nomeArquivoAudioSerTocado = audioPlantas
-        localRedirecionamento = plantas[plantaFalada]
+        localRedirecionamento = PLANTAS[plantaFalada]
         redirecionarMapa = false
-    } else if (verificarPossuiPalavra(textoFaladoUsuario, palavrasEducacaoAmbiental)) {
-        nomeArquivoAudioSerTocado = audioEducacaoAmbiental
-        localRedirecionamento = "../html/educacao-ambiental.html"
-        redirecionarMapa = false
-    } else if (verificarPossuiPalavra(textoFaladoUsuario, palavrasSucessaoEcologica)){
-        nomeArquivoAudioSerTocado = audioSucessaoEcologia
-        localRedirecionamento = "../html/sucessao-ecologica.html"
-        redirecionarMapa = false
-    } else if (verificarPossuiPalavra(textoFaladoUsuario, palavrasIncendio)){
-        nomeArquivoAudioSerTocado = audioIncendio
-        localRedirecionamento = "../html/incendio-criminoso.html"
-        redirecionarMapa = false
-    } else if (verificarPossuiPalavra(textoFaladoUsuario, palavrasAtividadeHumana)){
-        nomeArquivoAudioSerTocado = audioAtividadeHumana
-        localRedirecionamento = "../html/atividades-humanas.html"
-        redirecionarMapa = false
-    } else if (verificarPossuiPalavra(textoFaladoUsuario, palavrasQualidadeAgua)){
-        nomeArquivoAudioSerTocado = audioQualidadeAgua
-        localRedirecionamento = "../html/classificacao-agua.html"
-        redirecionarMapa = false
-    } else if (verificarPossuiPalavra(textoFaladoUsuario, palavrasEspecieArborea)){
-        nomeArquivoAudioSerTocado = audioEspecieArborea
-        localRedirecionamento = "../html/especies-arboreas.html"
-        redirecionarMapa = false
-    } else if (verificarPossuiPalavra(textoFaladoUsuario, palavrasEspecieFlora)){
-        nomeArquivoAudioSerTocado = audioEspecieFlora
-        localRedirecionamento = "../html/especies-flora-mapa.html"
-        redirecionarMapa = false
-    } else if (verificarPossuiPalavra(textoFaladoUsuario, palavrasClassificacaoGeologica)){
-        nomeArquivoAudioSerTocado = audioClassificacaoGeologica
-        localRedirecionamento = "../html/classificacao-geologica.html"
-        redirecionarMapa = false
-    } else if (verificarPossuiPalavra(textoFaladoUsuario, palavrasEspecieFauna)){
-        nomeArquivoAudioSerTocado = audioEspecieFauna
-        localRedirecionamento = "../html/especies-fauna.html"
-        redirecionarMapa = false
-    } else if (verificarPossuiPalavra(textoFaladoUsuario, palavrasBioma)){
-        nomeArquivoAudioSerTocado = audioBioma
-        localRedirecionamento = "../html/bioma-mata-atlantica.html"
-        redirecionarMapa = false
-    } else if (verificarPossuiPalavra(textoFaladoUsuario, palavrasClima)){
-        nomeArquivoAudioSerTocado = audioClima
-        localRedirecionamento = "../html/clima-cidade.html"
-        redirecionarMapa = false
-    } else if(verificarPossuiPalavra(textoFaladoUsuario, palavrasContextoHistorico)){
-        nomeArquivoAudioSerTocado = audioContextoHistorico
-        localRedirecionamento = "../html/contextualizacao-historica.html"
-        redirecionarMapa = false
-    } else if(verificarPossuiPalavra(textoFaladoUsuario, palavrasLagoaQuatro)){
-        nomeArquivoAudioSerTocado = audioLagoaQuatro
-        localRedirecionamento = "../html/mapa.html"
-        redirecionarMapa = true
-    } else if(verificarPossuiPalavra(textoFaladoUsuario, palavrasConstrucaoHistorica)){
-        nomeArquivoAudioSerTocado = audioConstrucaoHistorica
-        localRedirecionamento = "../html/mapa.html"
-        redirecionarMapa = true
-    } else if(verificarPossuiPalavra(textoFaladoUsuario, palavrasLagoaTres)){
-        nomeArquivoAudioSerTocado = audioLagoaTres
-        localRedirecionamento = "../html/mapa.html"
-        redirecionarMapa = true
-    } else if(verificarPossuiPalavra(textoFaladoUsuario, palavrasReflorestamento)){
-        nomeArquivoAudioSerTocado = audioReflorestamento
-        localRedirecionamento = "../html/mapa.html"
-        redirecionarMapa = true
-    } else if(verificarPossuiPalavra(textoFaladoUsuario, palavrasRuínas)){
-        nomeArquivoAudioSerTocado = audioRuinas
-        localRedirecionamento = "../html/mapa.html"
-        redirecionarMapa = true
-    } else if(verificarPossuiPalavra(textoFaladoUsuario, palavrasFragmentoMata)){
-        nomeArquivoAudioSerTocado = audioFragmentoMata
-        localRedirecionamento = "../html/mapa.html"
-        redirecionarMapa = true
-    } else if(verificarPossuiPalavra(textoFaladoUsuario, palavrasLagoaUm)){
-        nomeArquivoAudioSerTocado = audioLagoaUm
-        localRedirecionamento = "../html/mapa.html"
-        redirecionarMapa = true
+    } else {
+        for(const conteudo of CONTEUDOS){
+            if(verificarPossuiPalavra(textoFaladoUsuario, conteudo['palavras'])){
+                nomeArquivoAudioSerTocado = conteudo['audio']
+                localRedirecionamento = conteudo['pagina']
+                redirecionarMapa = conteudo['mapa']
+            }
+        }
     }
 
     if(redirecionarMapa){
@@ -236,7 +265,7 @@ function tocarArquivoAudio(arquivoAudio) {
     return new Promise(resposta =>{
         arquivoAudio.play()
         arquivoAudio.onended = resposta
-      })
+    })
 }
 
 function verificarPossuiPalavra(textoFalado, listaPalavras){
@@ -247,7 +276,7 @@ function verificarFalouPlanta(textoFalado){
     palavras = textoFalado.split(' ')
     for (palavra of palavras){
         palavaraMinusculo = palavra.toLowerCase()
-        if (palavaraMinusculo in plantas){
+        if (palavaraMinusculo in PLANTAS){
             return palavaraMinusculo
         }
     }
