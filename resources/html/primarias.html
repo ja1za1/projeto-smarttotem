@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primárias</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
+</head>
+<body>
+
+    <div class="botao-voltar text-white" onclick="javascript:history.back()">
+        <img src="../../assets/images/arrow-left-solid.svg" alt="Voltar" width="80px" height="80px">
+        <h2 class="ms-2"><strong>Voltar</strong></h2>
+    </div>
+
+    <div class="content-stack justify-content-center bg-success text-white">
+        <div id="carrosel" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carrosel" data-bs-slide-to="0" class="active btn-indicator" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carrosel" data-bs-slide-to="1" class="btn-indicator" aria-label="Slide 2"></button>
+            </div>
+
+            <div class="carousel-inner p-4">
+                <div class="carousel-item active p-4">
+                    <div class="container">
+                        <div class="row row-cols-2 g-5">
+                            <div class="col d-flex justify-content-center">
+                                <img src="../../assets/images/camboata.png">
+                            </div>
+                
+                            <div class="col fs-4">
+                                <h1 class="mb-3 "><strong>Camboatá (Cupania vernalis)</strong></h1>
+                                <p style="text-align: justify;">Seu nome vem do Tupi 'cambuatã', que significa 'árvore da chuva'. É uma árvore nativa da Mata Atlântica, pode atingir até 25 metros de altura e tem uma copa arredondada. Decídua, perde suas folhas no inverno. As flores são pequenas e amarelas, e florescem no início da primavera. Os frutos são pequenas bagas vermelhas, que são comestíveis e têm um sabor doce. A casca do camboatá é usada na medicina popular para o tratamento de diversas doenças, como asma, tosse e feridas.</p>
+                                <button id="btn-camboata" class="btn btn-lg btn-primary mt-5 w-100 fs-2">Visualizar no mapa</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                    <div class="carousel-item p-4">
+                        <div class="container">
+                            <div class="row row-cols-2 g-5">
+                                <div class="col d-flex justify-content-center">
+                                    <img src="../../assets/images/abacateiro.png">
+                                </div>
+                    
+                                <div class="col fs-4">
+                                    <h1 class="mb-3 "><strong>Abacateiro (Persea americana)</strong></h1>
+                                    <p style="text-align: justify;">É uma árvore nativa da América Central e México, de grande porte, podendo atingir até 20 metros de altura. As folhas são coriáceas, lanceoladas e lustrosas. As flores são pequenas e hermafroditas. O fruto é uma drupa, que pode ter formato piriforme, ovóide ou redondo. É uma fruta rica em nutrientes, incluindo vitamina C, vitamina E, potássio e fibras.</p>
+                                    <button id="btn-abacateiro" class="btn btn-lg btn-primary mt-5 w-100 fs-2">Visualizar no mapa</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carrosel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carrosel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+
+    </div>
+
+    <script src="../bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../js/primarias.js"></script>
+</body>
+</html>

@@ -4,11 +4,30 @@ function getParametro(nomeParametro) {
     return parametrosUrl.get(nomeParametro);
 }
 
-window.onload = function() {
-    // Verifica se há um parâmetro na URL
-    const parametro = getParametro('audio');
+function desenharCirculoMapa(coordenadasCirculo) {
+    var imagemMapa = document.getElementById("imagem-mapa");
+    var canvasImagem = document.getElementById("canvas-imagem");
+        
+    canvasImagem.style.position = "absolute";
+    canvasImagem.style.left = imagemMapa.offsetLeft + "px";
+    canvasImagem.style.top = imagemMapa.offsetTop + "px";
+        
+    var ctx = canvasImagem.getContext("2d");
+    ctx.beginPath();
+    ctx.arc(coordenadasCirculo[0],coordenadasCirculo[1],coordenadasCirculo[2], 0, 2 * Math.PI, false);
+    ctx.lineWidth = 2;
+    ctx.strokeStyle = 'red';
+    ctx.stroke();
+    canvasImagem.classList.remove('visually-hidden')
+}
 
-    if (parametro) {
-        new Audio(parametro).play()
-    }
+// Verifica se há um parâmetro na URL
+const parametroAudio = getParametro('audio');
+const parametroCoordenadas = getParametro('coordenadas')
+
+if (parametroAudio) {
+    new Audio(parametroAudio).play()
+} else if (parametroCoordenadas) {
+    const coordenadas = parametroCoordenadas.split(',')
+    desenharCirculoMapa(coordenadas)
 }
