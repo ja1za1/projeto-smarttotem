@@ -1,8 +1,8 @@
 {
-    "informacoes": {
-        "tipo" : "local",
-        "titulo" : "Área de Reflorestamento à esquerda",
-        "imagem" : "../../assets/images/area-reflorestamento-esquerda.jpeg",
-        "texto" : " Localizada próximo a Lagoa 3, possui um terreno com uma subida leve e moderada com uma vista muito bela."
-    }
+  "informacoes": {
+    "tipo": "local",
+    "nome": "Área de Reflorestamento à esquerda",
+    "imagem": "../../assets/images/area-reflorestamento-esquerda.jpeg",
+    "sobre": " Localizada próximo a Lagoa 3, possui um terreno com uma subida leve e moderada com uma vista muito bela."
+  }
 }

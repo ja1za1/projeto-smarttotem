@@ -1,8 +1,9 @@
 {
-    "informacoes": {
-        "tipo" : "flora",
-        "titulo" : "Abacateiro (Persea americana)",
-        "imagem" : "../../assets/images/abacateiro.png",
-        "texto" : "É uma árvore nativa da América Central e México, de grande porte, podendo atingir até 20 metros de altura. As folhas são coriáceas, lanceoladas e lustrosas. As flores são pequenas e hermafroditas. O fruto é uma drupa, que pode ter formato piriforme, ovóide ou redondo. É uma fruta rica em nutrientes, incluindo vitamina C, vitamina E, potássio e fibras."
-    }
+  "informacoes": {
+    "tipo": "flora",
+    "nome": "Abacateiro",
+    "nomeCientifico": "Persea americana",
+    "imagem": "../../assets/images/abacateiro.png",
+    "sobre": "É uma árvore nativa da América Central e México, de grande porte, podendo atingir até 20 metros de altura. As folhas são coriáceas, lanceoladas e lustrosas. As flores são pequenas e hermafroditas. O fruto é uma drupa, que pode ter formato piriforme, ovóide ou redondo. É uma fruta rica em nutrientes, incluindo vitamina C, vitamina E, potássio e fibras."
+  }
 }

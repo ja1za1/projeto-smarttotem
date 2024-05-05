@@ -1,8 +1,8 @@
 {
-    "informacoes": {
-        "tipo" : "local",
-        "titulo" : "Lagoa 3",
-        "imagem" : "../../assets/images/lagoa3.jpg",
-        "texto" : "Localizada na parcela à esquerda da estrada, próxima a área de reflorestamento e a Construção Histórica."
-    }
+  "informacoes": {
+    "tipo": "local",
+    "nome": "Lagoa 3",
+    "imagem": "../../assets/images/lagoa3.jpg",
+    "sobre": "Localizada na parcela à esquerda da estrada, próxima a área de reflorestamento e a Construção Histórica."
+  }
 }

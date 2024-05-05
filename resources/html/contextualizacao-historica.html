@@ -1,109 +1,140 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contextualização histórica</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
-    
-</head>
-<body>
 
-    <div class="botao-voltar text-dark" onclick="javascript:history.back()">
-        <img src="../../assets/images/arrow-left-solid.svg" alt="Voltar" width="80px" height="80px">
-        <h2 class="ms-2"><strong>Voltar</strong></h2>
-    </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contextualização histórica</title>
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
 
-    <div class="content-stack bg-white text-dark justify-content-center">
+    </head>
 
-        <div id="carrosel" class="carousel carousel-dark slide">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carrosel" data-bs-slide-to="0" class="active btn-indicator" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carrosel" data-bs-slide-to="1" class="btn-indicator" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carrosel" data-bs-slide-to="2" class="btn-indicator" aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#carrosel" data-bs-slide-to="3" class="btn-indicator" aria-label="Slide 4"></button>
-            </div>
-            <div class="carousel-inner p-4">
-                <div class="carousel-item active p-4">
-                    <div class="container">
-                        <div class="row row-cols-2 g-5" style="text-align: justify;">
-                            <div class="col d-flex align-items-center">
-                                <img src="../../assets/images/estacao-serisic.jpg" alt="Foto da antiga Estação Sericícola" class="w-100">
-                            </div>
+    <body>
 
-                            <div class="col fs-2 ">
-                                <p>A sericícola em Barbacena foi uma indústria-escola destinada à transmissão cultural da seda natural no Brasil. Por trás deste projeto estava o imigrante italiano Amílcar Savassi. Atualmente o monumento é gerido pelo Grupo Ponto de Partida, fundado em 1980 no intuito de proporcionar formação e ensino nas artes dramáticas e musicais, que busca a utilização da área como uma forma de agregar à comunidade barbacenense e entrega um espaço que proporcione vivências positivas e recuperar o patrimônio ambiental e cultural.</p>
-            
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="carousel-item p-4">
-                    <div class="container">
-                        <div class="row row-cols-2 g-5" style="text-align: justify;">
-                            <div class="col d-flex align-items-center">
-                                <img src="../../assets/images/bituca.png" alt="Bituca" class="w-100">
-                            </div>
-                            <div class="col fs-2 ">
-                                <p>Localizada num cenário com remanescentes de Mata Atlântica, atualmente, suas dependências abrigam a Secretaria Regional de Saúde, a BITUCA - Universidade de Música Popular e o Grupo Ponto de Partida.</p>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="carousel-item p-4">
-                    <div class="container">
-                        <div class="row row-cols-2 g-5" style="text-align: justify;">
-                            <div class="col">
-                                <img src="../../assets/images/estacao-serisic2.png" alt="Foto da Estação Ponto de Partida" class="w-100">
-                            </div>
-
-                            <div class="col d-flex align-items-center fs-2">
-                                <p>A principal área utilizada nessa empreitada foi a <strong>Colônia Rodrigo Silva</strong>, estabelecida em 1888 pelo Governo Imperial. Em 1890, a colônia foi cedida ao Estado de Minas Gerais com uma <strong>área inicial de 37.802.670,20 m²</strong>. Os habitantes da colônia eram principalmente imigrantes italianos, que em 1911 representavam 1.364 dos 1.614 residentes. <strong>Amílcar Savassi</strong> era um desses imigrantes e foi nomeado diretor da Colônia em 1898. Desde então, ele incentivou a <strong>plantação de amoreira e a criação do bicho-da-seda</strong>, além de outras iniciativas agropecuárias (SAVASSI, 199, p. 208). </p>
-                    
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="carousel-item p-4">
-                    <div class="container">
-                        <div class="row row-cols-2 g-5" style="text-align: justify;">
-                            <div class="col">
-                                <img src="../../assets/images/bicho-seda.jpg" alt="Foto de um bicho da seda" class="w-100">
-                            </div>
-            
-                            <div class="col fs-2 ">
-                                <p>No ano de 1915, a infraestrutura da Estação Sericícola possibilitou a produção de vestidos de seda, coletes, echarpes e meias. Os edifícios mais importantes da fábrica, que ainda existem atualmente, eram utilizados para a Sessão Experimental, Escola de Sericicultura, Secretaria e Departamento de Fiação e Tecelagem.</p>
-                    
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+        <div class="botao-voltar text-dark" onclick="javascript:history.back()">
+            <img src="../../assets/images/arrow-left-solid.svg" alt="Voltar" width="80px" height="80px">
+            <h2 class="ms-2"><strong>Voltar</strong></h2>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carrosel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carrosel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-        <div class="d-flex flex-column align-items-center position-absolute" style="right: 5%; bottom: 1%;">
-            <p id="texto-reproduzir" class="fs-4 text-center" style="width: 283px;">Reproduzir texto em aúdio</p>
-            <button class="d-flex flex-row align-items-center justify-content-center rounded-circle" id="btn-reproduzir-som" style="width: 112px; height: 112px;"><img src="../../assets/images/som.png" id="imagem-botao-reproduzir-audio" width="60%"></button>
+
+        <div class="content-stack bg-white text-dark justify-content-center">
+
+            <div id="carrosel" class="carousel carousel-dark slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carrosel" data-bs-slide-to="0" class="active btn-indicator"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carrosel" data-bs-slide-to="1" class="btn-indicator"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carrosel" data-bs-slide-to="2" class="btn-indicator"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carrosel" data-bs-slide-to="3" class="btn-indicator"
+                        aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner p-4">
+                    <div class="carousel-item active p-4">
+                        <div class="container">
+                            <div class="row row-cols-2 g-5" style="text-align: justify;">
+                                <div class="col d-flex align-items-center">
+                                    <img src="../../assets/images/estacao-serisic.jpg"
+                                        alt="Foto da antiga Estação Sericícola" class="w-100">
+                                </div>
+
+                                <div class="col fs-2 ">
+                                    <p>A sericícola em Barbacena foi uma indústria-escola destinada à transmissão
+                                        cultural da seda natural no Brasil. Por trás deste projeto estava o imigrante
+                                        italiano Amílcar Savassi. Atualmente o monumento é gerido pelo Grupo Ponto de
+                                        Partida, fundado em 1980 no intuito de proporcionar formação e ensino nas artes
+                                        dramáticas e musicais, que busca a utilização da área como uma forma de agregar
+                                        à comunidade barbacenense e entrega um espaço que proporcione vivências
+                                        positivas e recuperar o patrimônio ambiental e cultural.</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item p-4">
+                        <div class="container">
+                            <div class="row row-cols-2 g-5" style="text-align: justify;">
+                                <div class="col d-flex align-items-center">
+                                    <img src="../../assets/images/bituca.png" alt="Bituca" class="w-100">
+                                </div>
+                                <div class="col fs-2 ">
+                                    <p>Localizada num cenário com remanescentes de Mata Atlântica, atualmente, suas
+                                        dependências abrigam a Secretaria Regional de Saúde, a BITUCA - Universidade de
+                                        Música Popular e o Grupo Ponto de Partida.</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item p-4">
+                        <div class="container">
+                            <div class="row row-cols-2 g-5" style="text-align: justify;">
+                                <div class="col">
+                                    <img src="../../assets/images/estacao-serisic2.png"
+                                        alt="Foto da Estação Ponto de Partida" class="w-100">
+                                </div>
+
+                                <div class="col d-flex align-items-center fs-2">
+                                    <p>A <strong>Colônia Rodrigo Silva</strong> foi cedida ao Estado de Minas Gerais com
+                                        uma
+                                        <strong>área inicial de 37.802.670,20 m²</strong>. Os habitantes da colônia eram
+                                        principalmente imigrantes italianos, que em 1911 representavam 1.364 dos 1.614
+                                        residentes. <strong>Amílcar Savassi</strong> era um desses imigrantes e foi
+                                        nomeado diretor da Colônia em 1898 e continuou incentivando
+                                        a <strong>plantação de amoreira e a criação do bicho-da-seda</strong>, além de
+                                        outras iniciativas agropecuárias (SAVASSI, 199, p. 208).
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item p-4">
+                        <div class="container">
+                            <div class="row row-cols-2 g-5" style="text-align: justify;">
+                                <div class="col">
+                                    <img src="../../assets/images/bicho-seda.jpg" alt="Foto de um bicho da seda"
+                                        class="w-100">
+                                </div>
+
+                                <div class="col fs-2 ">
+                                    <p>No ano de 1915, a infraestrutura da Estação Sericícola possibilitou a produção de
+                                        vestidos de seda, coletes, echarpes e meias. Os edifícios mais importantes da
+                                        fábrica, que ainda existem atualmente, eram utilizados para a Sessão
+                                        Experimental, Escola de Sericicultura, Secretaria e Departamento de Fiação e
+                                        Tecelagem.</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carrosel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carrosel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+            <div class="d-flex flex-column align-items-center position-absolute" style="right: 5%; bottom: 1%;">
+                <p id="texto-reproduzir" class="fs-4 text-center" style="width: 283px;">Reproduzir texto em aúdio</p>
+                <button class="d-flex flex-row align-items-center justify-content-center rounded-circle"
+                    id="btn-reproduzir-som" style="width: 112px; height: 112px;"><img src="../../assets/images/som.png"
+                        id="imagem-botao-reproduzir-audio" width="60%"></button>
+            </div>
         </div>
-    </div>
 
 
-    <script src="../bootstrap/bootstrap.bundle.min.js"></script>
-    <!-- <script src="../js/reproduzir-texto-contextualizacao-historica.js"></script> -->
-    <script src="../js/reproduzir-texto.js"></script>
-</body>
+        <script src="../bootstrap/bootstrap.bundle.min.js"></script>
+        <script src="../js/reproduzir-texto.js"></script>
+    </body>
+
 </html>

@@ -1,41 +1,48 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Local Mapa</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
-    <script src="../js/scrollreveal.js"></script>
-</head>
-<body>
-    <div class="botao-voltar text-white" onclick="javascript:history.back()">
-        <img src="../../assets/images/arrow-left-solid.svg" alt="Voltar" width="80px" height="80px">
-        <h2 class="ms-2"><strong>Voltar</strong></h2>
-    </div>
 
-    <div class="content-stack justify-content-center bg-success text-white">
-        <div class="container texto-scroll-reveal" style="margin-top: 7rem;">
-            <div class="row row-cols-2 g-5">
-                <div class="col d-flex justify-content-center">
-                    <img id="imagem-local">
-                </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Local Mapa</title>
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
+        <script src="../js/scrollreveal.js"></script>
+    </head>
 
-                <div class="col fs-4">
-                    <h1 class="mb-3 "><strong id="titulo-local"></strong></h1>
-                    <p style="text-align: justify;" id="texto-local"></p>
+    <body>
+        <div class="botao-voltar text-white" onclick="javascript:history.back()">
+            <img src="../../assets/images/arrow-left-solid.svg" alt="Voltar" width="80px" height="80px">
+            <h2 class="ms-2"><strong>Voltar</strong></h2>
+        </div>
+
+        <div class="content-stack justify-content-center bg-success text-white">
+            <div class="container texto-scroll-reveal" style="margin-top: 7rem;">
+                <div class="row row-cols-2 g-5">
+                    <div class="col d-flex flex-column align-items-center">
+                        <img id="imagem-local">
+                        <p id="legenda-foto" class="fs-5 mt-1"></p>
+                    </div>
+
+                    <div class="col fs-4">
+                        <h1 class="mb-3 "><strong id="titulo-local"></strong> <i id="nome-cientifico"></i></h1>
+                        <p style="text-align: justify;" id="texto-local"></p>
+                    </div>
                 </div>
             </div>
+            <div class="d-flex flex-column align-items-center position-absolute texto-scroll-reveal"
+                style="right: 5%; bottom: 5%;">
+                <p id="texto-reproduzir" style="width: 283px;" class="fs-4 text-center">Reproduzir texto em aúdio</p>
+                <button class="d-flex flex-row align-items-center justify-content-center rounded-circle"
+                    id="btn-reproduzir-som" style="width: 112px; height: 112px;"><img src="../../assets/images/som.png"
+                        id="imagem-botao-reproduzir-audio" width="60%"></button>
+            </div>
         </div>
-        <div class="d-flex flex-column align-items-center position-absolute texto-scroll-reveal" style="right: 15%; bottom: 5%;">
-            <p id="texto-reproduzir" style="width: 283px;" class="fs-4 text-center">Reproduzir texto em aúdio</p>
-            <button class="d-flex flex-row align-items-center justify-content-center rounded-circle" id="btn-reproduzir-som" style="width: 112px; height: 112px;"><img src="../../assets/images/som.png" id="imagem-botao-reproduzir-audio" width="60%"></button>
-        </div>
-    </div>
 
-    <script src="../js/template.js"></script>
-    <script src="../bootstrap/bootstrap.bundle.min.js"></script>
-    <script src="../js/scrollreveal-config.js"></script>
-    <script src="../js/reproduzir-texto.js"></script>
-</body>
+        <script src="../js/template.js"></script>
+        <script src="../bootstrap/bootstrap.bundle.min.js"></script>
+        <script src="../js/scrollreveal-config.js"></script>
+        <script src="../js/reproduzir-texto.js"></script>
+    </body>
+
 </html>

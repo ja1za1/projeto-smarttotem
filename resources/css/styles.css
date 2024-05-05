@@ -1,6 +1,6 @@
-* {
+/* * {
     cursor: none !important;
-} 
+}  */
 
 body {
     display: flex;
@@ -11,13 +11,18 @@ body {
     min-height: 100vh;
 }
 
+video {
+    max-width: 600px;
+    max-height: 600px;
+}
+
 .imagem-fundo {
     background-image: url("../../assets/images/Vista-Aérea-1-Rodrigo-Oliveira.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
     background-color: rgba(0, 0, 0, 0.7);
     background-blend-mode: multiply;
-      
+
 }
 
 .tamanho-padrao {
@@ -36,11 +41,11 @@ body {
 }
 
 .shadow-lg-custom {
-    box-shadow: 0 1rem 3rem rgba(0,0,0,5)!important;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 5) !important;
 }
 
 .shadow-sm-custom {
-    box-shadow: 0 0.5rem 1rem rgba(0,0,0,5)!important;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 5) !important;
 }
 
 .imagem-card {
@@ -65,7 +70,7 @@ body {
     background-color: #FFD78F;
 }
 
-.botao-voltar{
+.botao-voltar {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -76,13 +81,15 @@ body {
     color: white;
 }
 
-.carousel-control-next, .carousel-control-prev {
+.carousel-control-next,
+.carousel-control-prev {
     top: 50% !important;
     bottom: 50% !important;
     opacity: 1 !important;
 }
 
-.carousel-control-next-icon, .carousel-control-prev-icon{
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
     width: 10rem !important;
     height: 10rem !important;
 }
@@ -97,10 +104,9 @@ body {
 }
 
 span.carousel-control-next-icon {
-    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='black'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/></svg>") ;
-  }
-  
-span.carousel-control-prev-icon {
-    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='black'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/></svg>") ; 
-} 
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='black'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/></svg>");
+}
 
+span.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='black'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/></svg>");
+}

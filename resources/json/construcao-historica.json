@@ -1,8 +1,8 @@
 {
-    "informacoes": {
-        "tipo" : "local",
-        "titulo" : "Construção Histórica",
-        "imagem" : "../../assets/images/construcao-historica.jpeg",
-        "texto" : "O local era usado para criação de animais (bovinos e suínos) e para a confecção dos tecidos."
-    }
+  "informacoes": {
+    "tipo": "local",
+    "nome": "Construção Histórica",
+    "imagem": "../../assets/images/construcao-historica.jpeg",
+    "sobre": "O local era usado para criação de animais (bovinos e suínos) e para a confecção dos tecidos."
+  }
 }

@@ -1,8 +1,9 @@
 {
-    "informacoes": {
-        "tipo" : "flora",
-        "titulo" : "Aroeira-vermelha (Schinus terebinthifolia)",
-        "imagem" : "../../assets/images/aroeira-vermelha.png",
-        "texto" : "É nativa da América do Sul, árvore de pequeno a médio porte, podendo atingir de 5 a 10 metros de altura. O nome 'aroeira' vem do tupi-guarani 'aroweira', que significa 'árvore de cheiro forte'. Tem uma casca avermelhada, que é rica em taninos, que são substâncias com propriedades adstringentes, anti-inflamatórias e cicatrizantes. As folhas também são ricas em taninos e são utilizadas na medicina popular para o tratamento de diarreia, disenteria, hemorragia e dor de garganta."
-    }
+  "informacoes": {
+    "tipo": "flora",
+    "nome": "Aroeira-vermelha",
+    "nomeCientifico": "Schinus terebinthifolia",
+    "imagem": "../../assets/images/aroeira-vermelha.png",
+    "sobre": "É nativa da América do Sul, árvore de pequeno a médio porte, podendo atingir de 5 a 10 metros de altura. O nome 'aroeira' vem do tupi-guarani 'aroweira', que significa 'árvore de cheiro forte'. Tem uma casca avermelhada, que é rica em taninos, que são substâncias com propriedades adstringentes, anti-inflamatórias e cicatrizantes. As folhas também são ricas em taninos e são utilizadas na medicina popular para o tratamento de diarreia, disenteria, hemorragia e dor de garganta."
+  }
 }

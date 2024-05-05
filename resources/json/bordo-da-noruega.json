@@ -1,8 +1,9 @@
 {
-    "informacoes": {
-        "tipo" : "flora",
-        "titulo" : "Bordo-da-noruega (Acer platanoides)",
-        "imagem" : "../../assets/images/bordo-da-noruega.png",
-        "texto" : "É uma árvore caducifólia de médio porte, nativa da Europa e Ásia. É uma árvore decídua, o que significa que perde suas folhas no inverno. Pode atingir até 30 metros de altura. O nome 'bordo' vem do latim 'acer', que significa 'agudo'. Isso se refere aos lóbulos das folhas do bordo, que são pontiagudos. As flores são pequenas e amarelas, e florescem no início da primavera. Os frutos são sementes aladas, dispersos pelo vento. É fonte de alimento para insetos, pássaros e outros animais."
-    }
+  "informacoes": {
+    "tipo": "flora",
+    "nome": "Bordo-da-noruega",
+    "nomeCientifico": "Acer platanoides",
+    "imagem": "../../assets/images/bordo-da-noruega.png",
+    "sobre": "É uma árvore caducifólia de médio porte, nativa da Europa e Ásia. É uma árvore decídua, o que significa que perde suas folhas no inverno. Pode atingir até 30 metros de altura. O nome 'bordo' vem do latim 'acer', que significa 'agudo'. Isso se refere aos lóbulos das folhas do bordo, que são pontiagudos. As flores são pequenas e amarelas, e florescem no início da primavera. Os frutos são sementes aladas, dispersos pelo vento. É fonte de alimento para insetos, pássaros e outros animais."
+  }
 }

@@ -1,88 +1,145 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Incêndio Criminoso</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
-</head>
-<body>
 
-    <div class="botao-voltar text-white" onclick="javascript:history.back()">
-        <img src="../../assets/images/arrow-left-solid.svg" alt="Voltar" width="80px" height="80px">
-        <h2 class="ms-2"><strong>Voltar</strong></h2>
-    </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Incêndio Criminoso</title>
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/player-video.css">
+    </head>
 
-    <div class="content-stack bg-danger text-white justify-content-center">
-        <div id="carrosel" class="carousel slide">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carrosel" data-bs-slide-to="0" class="active btn-indicator" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carrosel" data-bs-slide-to="1" class="btn-indicator" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carrosel" data-bs-slide-to="2" class="btn-indicator" aria-label="Slide 3"></button>
+    <body>
+
+        <div class="botao-voltar text-white" onclick="javascript:history.back()">
+            <img src="../../assets/images/arrow-left-solid.svg" alt="Voltar" width="80px" height="80px">
+            <h2 class="ms-2"><strong>Voltar</strong></h2>
+        </div>
+
+        <div class="content-stack bg-danger text-white justify-content-center">
+            <div id="carrosel" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carrosel" data-bs-slide-to="0" class="active btn-indicator"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carrosel" data-bs-slide-to="1" class="btn-indicator"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carrosel" data-bs-slide-to="2" class="btn-indicator"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner p-4">
+                    <div class="carousel-item active p-4">
+                        <div class="container">
+                            <div class="row row-cols-2 g-5" style="text-align: justify;">
+                                <div class="col d-flex align-items-center">
+                                    <img src="../../assets/images/fogo.gif" alt="Gif Animado de Fogo" class="w-100">
+                                </div>
+
+                                <div class="col d-flex align-items-center fs-2">
+                                    <p>Uma ferramenta antigamente usada por caçadores-coletores há mais de 10 mil anos
+                                        para limpar terrenos. Nos séculos XVIII e XIX, foi utilizado de forma agressiva
+                                        para criar espaço para gado e plantações de café, causando danos prejudiciais às
+                                        florestas. Esse uso contínuo e frequente do fogo modificou a paisagem, afetando
+                                        a estrutura, composição e regeneração das comunidades vegetais, causando a
+                                        redução drástica das florestas e outros ambientes naturais.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item p-4">
+                        <div class="container">
+                            <div class="row row-cols-2 g-5" style="text-align: justify;">
+                                <div class="col d-flex align-items-center">
+                                    <div class="container-video">
+                                        <video src="../../assets/videos/incendio-florestal.mp4"></video>
+                                        <div class="player-video">
+                                            <button class="play-pause"><img class="icone-play"
+                                                    src="../../assets/images/play.svg"><img class="icone-pause"
+                                                    src="../../assets/images/pause.svg"></button>
+                                            <button><img class="voltar-video"
+                                                    src="../../assets/images/backward.webp"></button>
+                                            <div class="timeline">
+                                                <div class="bar">
+                                                    <div class="inner"></div>
+                                                </div>
+                                            </div>
+                                            <button><img class="avancar-video"
+                                                    src="../../assets/images/forward.webp"></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col d-flex align-items-center fs-2 ">
+                                    <p>Incêndios florestais são desastres ambientais que ocorrem quando o fogo se
+                                        alastra fora do controle em áreas de cobertura vegetal. Esses incêndios podem
+                                        ser causados por raios ou ações humanas, como descarte de lixo. Os incêndios
+                                        florestais prejudicam a flora e a fauna, diminuem a qualidade do solo e
+                                        contribuem para o aquecimento global.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item p-4">
+                        <div class="container">
+                            <div class="row row-cols-2 g-5">
+                                <div class="col d-flex align-items-center">
+                                    <div class="container-video">
+                                        <video src="../../assets/videos/consequencias-incendio.mp4"></video>
+                                        <div class="player-video">
+                                            <button class="play-pause"><img class="icone-play"
+                                                    src="../../assets/images/play.svg"><img class="icone-pause"
+                                                    src="../../assets/images/pause.svg"></button>
+                                            <button><img class="voltar-video"
+                                                    src="../../assets/images/backward.webp"></button>
+                                            <div class="timeline">
+                                                <div class="bar">
+                                                    <div class="inner"></div>
+                                                </div>
+                                            </div>
+                                            <button><img class="avancar-video"
+                                                    src="../../assets/images/forward.webp"></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col d-flex align-items-center fs-2 " style="text-align: justify;">
+                                    <p>Os incêndios florestais têm consequências devastadoras para o meio ambiente, a
+                                        circulação atmosférica e os seres humanos. Eles causam perda de biodiversidade,
+                                        redução do volume de nutrientes presentes no solo, aumento da emissão de gases
+                                        poluentes na atmosfera, destruição de infraestrutura como estradas, linhas de
+                                        transmissão de energia, prédios e casas situadas nas proximidades, perdas
+                                        materiais com a destruição do patrimônio das pessoas que vivem em áreas
+                                        atingidas, e pessoas desabrigadas e mortes tanto pela ação direta do fogo quanto
+                                        da fumaça.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="carousel-inner p-4">
-                <div class="carousel-item active p-4">
-                    <div class="container">
-                        <div class="row row-cols-2 g-5" style="text-align: justify;">
-                            <div class="col d-flex align-items-center">
-                                <img src="../../assets/images/gifs-animados-de-fogo-2.gif" alt="Gif Animado de Fogo" class="w-100">
-                            </div>
-
-                            <div class="col d-flex align-items-center fs-2">
-                                <p>Uma ferramenta antigamente usada por caçadores-coletores há mais de 10 mil anos para limpar terrenos. Nos séculos XVIII e XIX, foi utilizado de forma agressiva para criar espaço para gado e plantações de café, causando danos prejudiciais às florestas. Esse uso contínuo e frequente do fogo modificou a paisagem, afetando a estrutura, composição e regeneração das comunidades vegetais, causando a redução drástica das florestas e outros ambientes naturais.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="carousel-item p-4">
-                    <div class="container">
-                        <div class="row row-cols-2 g-5" style="text-align: justify;">
-                            <div class="col d-flex align-items-center">
-                                <video src="../../assets/videos/incendio-florestal.mp4" controls disablePictureInPicture controlsList="nofullscreen nodownload noremoteplayback" width="600px" height="600px"></video>
-                            </div>
-                        
-                            <div class="col d-flex align-items-center fs-2 ">
-                                <p>Incêndios florestais são desastres ambientais que ocorrem quando o fogo se alastra fora do controle em áreas de cobertura vegetal. Esses incêndios podem ser causados por raios ou ações humanas, como descarte de lixo. Os incêndios florestais prejudicam a flora e a fauna, diminuem a qualidade do solo e contribuem para o aquecimento global.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="carousel-item p-4">
-                    <div class="container">
-                        <div class="row row-cols-2 g-5" style="text-align: justify;">
-                            <div class="col d-flex align-items-center">
-                                <video src="../../assets/videos/consequencias-incendio.mp4" controls disablePictureInPicture controlsList="nofullscreen nodownload noremoteplayback" width="600px" height="600px"></video>
-                            </div>
-
-                            <div class="col d-flex align-items-center fs-2 ">
-                                <p>Os incêndios florestais têm consequências devastadoras para o meio ambiente, a circulação atmosférica e os seres humanos. Eles causam perda de biodiversidade, redução do volume de nutrientes presentes no solo, aumento da emissão de gases poluentes na atmosfera, destruição de infraestrutura como estradas, linhas de transmissão de energia, prédios e casas situadas nas proximidades, perdas materiais com a destruição do patrimônio das pessoas que vivem em áreas atingidas, e pessoas desabrigadas e mortes tanto pela ação direta do fogo quanto da fumaça.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carrosel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carrosel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+            <div class="d-flex flex-column align-items-center position-absolute" style="right: 5%; bottom: 3%;">
+                <p id="texto-reproduzir" class="fs-4 text-center" style="width: 283px;">Reproduzir texto em aúdio</p>
+                <button class="d-flex flex-row align-items-center justify-content-center rounded-circle"
+                    id="btn-reproduzir-som" style="width: 112px; height: 112px;"><img src="../../assets/images/som.png"
+                        id="imagem-botao-reproduzir-audio" width="60%"></button>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carrosel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carrosel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-        <div class="d-flex flex-column align-items-center position-absolute" style="right: 5%; bottom: 3%;">
-            <p id="texto-reproduzir" class="fs-4 text-center" style="width: 283px;">Reproduzir texto em aúdio</p>
-            <button class="d-flex flex-row align-items-center justify-content-center rounded-circle" id="btn-reproduzir-som" style="width: 112px; height: 112px;"><img src="../../assets/images/som.png" id="imagem-botao-reproduzir-audio" width="60%"></button>
-        </div>
-    </div>
 
 
-    <script src="../bootstrap/bootstrap.bundle.min.js"></script>
-    <script src="../js/player-video.js"></script>
-    <script src="../js/reproduzir-texto.js"></script>
-</body>
+        <script src="../bootstrap/bootstrap.bundle.min.js"></script>
+        <script src="../js/reproduzir-texto.js"></script>
+        <script src="../js/player-video.js"></script>
+    </body>
+
 </html>

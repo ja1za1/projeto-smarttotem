@@ -1,8 +1,9 @@
 {
-    "informacoes": {
-        "tipo" : "flora",
-        "titulo" : "Vassourão (Vernonanthura discolor)",
-        "imagem" : "../../assets/images/vassourao.png",
-        "texto" : "É uma árvore nativa do Brasil. De médio porte, podendo atingir até 18 metros de altura. Tem crescimento rápido, podendo atingir a maturidade em poucos anos. A madeira é leve e de baixa densidade, sendo utilizada na produção de papel, compensados e outros produtos de madeira. As flores são pequenas e brancas, e são polinizadas por abelhas e outros insetos."
-    }
+  "informacoes": {
+    "tipo": "flora",
+    "nome": "Vassourão",
+    "nomeCientifico": "Vernonanthura discolor",
+    "imagem": "../../assets/images/vassourao.png",
+    "sobre": "É uma árvore nativa do Brasil. De médio porte, podendo atingir até 18 metros de altura. Tem crescimento rápido, podendo atingir a maturidade em poucos anos. A madeira é leve e de baixa densidade, sendo utilizada na produção de papel, compensados e outros produtos de madeira. As flores são pequenas e brancas, e são polinizadas por abelhas e outros insetos."
+  }
 }

@@ -1,0 +1,60 @@
+.avancar-video,
+.voltar-video {
+  width: 35px;
+  height: 35px;
+}
+
+.icone-play,
+.icone-pause {
+  width: 30px;
+  height: 30px;
+}
+
+.container-video {
+  position: relative;
+  width: max-content;
+  height: max-content;
+}
+
+.container-video .player-video button {
+  background: transparent;
+  color: #000;
+  font-weight: bolder;
+  border: none;
+  cursor: pointer;
+}
+
+.container-video .player-video .timeline {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  border: none;
+}
+
+.container-video .player-video .timeline .bar {
+  background: #eee;
+  height: 5px;
+  flex: 1;
+}
+
+.container-video .player-video .timeline .bar .inner {
+  background: red;
+  width: 0%;
+  height: 100%;
+}
+
+.fa {
+  font-size: 25px !important;
+  color: white;
+}
+
+.player-video {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  bottom: -25px;
+  border: 2px solid black;
+  background-color: black;
+}

@@ -1,52 +1,84 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mapa</title>
-    <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/styles.css">
-    <script src="../js/scrollreveal.js"></script>
-</head>
-<body>
 
-    <div class="botao-voltar text-dark" onclick="javascript:history.back()">
-        <img src="../../assets/images/arrow-left-solid.svg" alt="Voltar" width="80px" height="80px">
-        <h2 class="ms-2"><strong>Voltar</strong></h2>
-    </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mapa</title>
+        <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/styles.css">
+        <script src="../js/scrollreveal.js"></script>
+    </head>
 
-    <div class="content-stack bg-white text-dark">
-        <div class="container d-flex flex-column justify-content-center align-items-center text-center">
-            <h1 class="texto-scroll-reveal"><strong>Mapa</strong></h1>
-            <p class="fs-2 word-break texto-scroll-reveal">Toque em qualquer local ou planta do mapa para obter mais informações.</p>
-            
-            <canvas id='canvas-imagem' class="visually-hidden" width='1296px' height='824px'></canvas>
-            <img id="imagem-mapa" src="../../assets/images/mapa.png" usemap="#image-map" class="w-100" alt="Mapa da Estação Sericícola">
-            <map name="image-map">
-                <area target="_self" alt="Lagoa 4" title="Lagoa 4" href="template.html?local=lagoa4" coords="170,501,75" shape="circle">
-                <area target="_self" alt="Construção Histórica" title="Construção Histórica" href="template.html?local=construcao-historica" coords="168,346,75" shape="circle">
-                <area target="_self" alt="Lagoa 3" title="Lagoa 3" href="template.html?local=lagoa3" coords="260,232,67" shape="circle">
-                <area target="_self" alt="Área de Reflorestamento" title="Área de Reflorestamento" href="template.html?local=reflorestamento1" coords="398,124,89" shape="circle">
-                <area target="_self" alt="Camboatá" title="Camboatá" href="template.html?local=camboata" coords="644,138,30" shape="circle">
-                <area target="_self" alt="Abacateiro" title="Abacateiro" href="template.html?local=abacateiro" coords="633,199,30" shape="circle">
-                <area target="_self" alt="Lavanda" title="Lavanda" href="template.html?local=lavanda" coords="676,229,22" shape="circle">
-                <area target="_self" alt="Quaresmeira" title="Quaresmeira" href="template.html?local=quaresmeira" coords="738,223,40" shape="circle">
-                <area target="_self" alt="Sangra d-água" title="Sangra d-água" href="template.html?local=sangra-dagua" coords="739,295,32" shape="circle">
-                <area target="_self" alt="Ruinas" title="Ruinas" href="template.html?local=ruinas" coords="683,259,730,370,695,413,641,275" shape="poly">
-                <area target="_self" alt="Bordo da Noruega" title="Bordo da Noruega" href="template.html?local=bordo-da-noruega" coords="761,356,32" shape="circle">
-                <area target="_self" alt="Aroeira Vermelha" title="Aroeira Vermelha" href="template.html?local=aroeira-vermelha" coords="743,427,39" shape="circle">
-                <area target="_self" alt="Fragmento de Mata Atlantica" title="Fragmento de Mata Atlantica" href="template.html?local=mata-atlantica" coords="820,282,966,608,1265,648,1284,522,1252,348,1090,275" shape="poly">
-                <area target="_self" alt="Lagoa 1" title="Lagoa 1" href="template.html?local=lagoa1" coords="1024,715,86" shape="circle">
-                <area target="_self" alt="Jacaranda Paulista" title="Jacaranda Paulista" href="template.html?local=jacaranda-paulista" coords="823,638,816,683,916,683,908,643" shape="poly">
-                <area target="_self" alt="Area de Reflorestamento2" title="Area de Reflorestamento2" href="template.html?local=reflorestamento2" coords="813,639,806,681,884,700,899,747,738,752,729,660,758,645" shape="poly">
-                <area target="_self" alt="Cafezinho do mato" title="Cafezinho do mato" href="template.html?local=cafezinho-do-mato" coords="724,593,711,637,843,633,808,601" shape="poly">
-                <area target="_self" alt="Vassourao" title="Vassourao" href="template.html?local=vassourao" coords="800,548,32" shape="circle">
-                <area target="_self" alt="IpeTabaco" title="IpeTabaco" href="template.html?local=ipe-tabaco" coords="713,473,732,505,823,507,813,468" shape="poly">
-            </map>
+    <body>
+
+        <div class="botao-voltar text-dark" onclick="javascript:history.back()">
+            <img src="../../assets/images/arrow-left-solid.svg" alt="Voltar" width="80px" height="80px">
+            <h2 class="ms-2"><strong>Voltar</strong></h2>
         </div>
-    </div>
-    <script src="../bootstrap/bootstrap.bundle.min.js"></script>
-    <script src="../js/scrollreveal-config.js"></script>
-    <script src="../js/mapa.js"></script>
-</body>
+
+        <div class="content-stack bg-white text-dark">
+            <div class="container d-flex flex-column justify-content-center align-items-center text-center">
+                <h1 class="texto-scroll-reveal"><strong>Mapa</strong></h1>
+                <p id="texto-mapa" class="fs-2 word-break texto-scroll-reveal">Toque em qualquer local ou planta do mapa
+                    para obter mais informações.</p>
+
+                <canvas id='canvas-imagem' class="visually-hidden" width='1296px' height='824px'></canvas>
+                <img id="imagem-mapa" src="../../assets/images/mapa.png" usemap="#image-map" class="w-100"
+                    alt="Mapa da Estação Sericícola">
+                <map name="image-map">
+                    <area target="_self" alt="Lagoa 4" title="Lagoa 4" href="template.html?local=lagoa4"
+                        coords="170,501,75" shape="circle">
+                    <area target="_self" alt="Construção Histórica" title="Construção Histórica"
+                        href="template.html?local=construcao-historica" coords="168,346,75" shape="circle">
+                    <area target="_self" alt="Lagoa 3" title="Lagoa 3" href="template.html?local=lagoa3"
+                        coords="260,232,67" shape="circle">
+                    <area target="_self" alt="Área de Reflorestamento" title="Área de Reflorestamento"
+                        href="template.html?local=reflorestamento1" coords="398,124,89" shape="circle">
+                    <area target="_self" alt="Camboatá" title="Camboatá" href="template.html?local=camboata"
+                        coords="644,138,30" shape="circle">
+                    <area target="_self" alt="Abacateiro" title="Abacateiro" href="template.html?local=abacateiro"
+                        coords="633,199,30" shape="circle">
+                    <area target="_self" alt="Lavanda" title="Lavanda" href="template.html?local=lavanda"
+                        coords="676,229,22" shape="circle">
+                    <area target="_self" alt="Quaresmeira" title="Quaresmeira" href="template.html?local=quaresmeira"
+                        coords="738,223,40" shape="circle">
+                    <area target="_self" alt="Sangra d-água" title="Sangra d-água"
+                        href="template.html?local=sangra-dagua" coords="739,295,32" shape="circle">
+                    <area target="_self" alt="Ruinas" title="Ruinas" href="template.html?local=ruinas"
+                        coords="683,259,730,370,695,413,641,275" shape="poly">
+                    <area target="_self" alt="Bordo da Noruega" title="Bordo da Noruega"
+                        href="template.html?local=bordo-da-noruega" coords="761,356,32" shape="circle">
+                    <area target="_self" alt="Aroeira Vermelha" title="Aroeira Vermelha"
+                        href="template.html?local=aroeira-vermelha" coords="743,427,39" shape="circle">
+                    <area target="_self" alt="Fragmento de Mata Atlantica" title="Fragmento de Mata Atlantica"
+                        href="template.html?local=mata-atlantica"
+                        coords="820,282,966,608,1265,648,1284,522,1252,348,1090,275" shape="poly">
+                    <area target="_self" alt="Lagoa 1" title="Lagoa 1" href="template.html?local=lagoa1"
+                        coords="1024,715,86" shape="circle">
+                    <area target="_self" alt="Jacaranda Paulista" title="Jacaranda Paulista"
+                        href="template.html?local=jacaranda-paulista" coords="823,638,816,683,916,683,908,643"
+                        shape="poly">
+                    <area target="_self" alt="Area de Reflorestamento2" title="Area de Reflorestamento2"
+                        href="template.html?local=reflorestamento2"
+                        coords="813,639,806,681,884,700,899,747,738,752,729,660,758,645" shape="poly">
+                    <area target="_self" alt="Cafezinho do mato" title="Cafezinho do mato"
+                        href="template.html?local=cafezinho-do-mato" coords="724,593,711,637,843,633,808,601"
+                        shape="poly">
+                    <area target="_self" alt="Vassourao" title="Vassourao" href="template.html?local=vassourao"
+                        coords="800,548,32" shape="circle">
+                    <area target="_self" alt="IpeTabaco" title="IpeTabaco" href="template.html?local=ipe-tabaco"
+                        coords="713,473,732,505,823,507,813,468" shape="poly">
+                    <area target="_self" alt="Bituca" title="Bituca" href="template.html?local=bituca"
+                        coords="496,530,49" shape="circle">
+                    <area target="_self" alt="Ponto de Partida" title="Ponto de Partida"
+                        href="template.html?local=ponto-de-partida" coords="480,424,57" shape="circle">
+                </map>
+            </div>
+        </div>
+        <script src="../bootstrap/bootstrap.bundle.min.js"></script>
+        <script src="../js/scrollreveal-config.js"></script>
+        <script src="../js/mapa.js"></script>
+    </body>
+
 </html>

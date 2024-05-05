@@ -1,60 +1,216 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Primárias</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
-</head>
-<body>
 
-    <div class="botao-voltar text-white" onclick="javascript:history.back()">
-        <img src="../../assets/images/arrow-left-solid.svg" alt="Voltar" width="80px" height="80px">
-        <h2 class="ms-2"><strong>Voltar</strong></h2>
-    </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Primárias</title>
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
+    </head>
 
-    <div class="content-stack justify-content-center bg-success text-white">
-        <div id="carrosel" class="carousel slide">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carrosel" data-bs-slide-to="0" class="active btn-indicator" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carrosel" data-bs-slide-to="1" class="btn-indicator" aria-label="Slide 2"></button>
-            </div>
+    <body>
 
-            <div class="carousel-inner p-4">
-                <div class="carousel-item active p-4">
-                    <div class="container">
-                        <div class="row row-cols-2 g-5">
-                            <div class="col d-flex justify-content-center">
-                                <img src="../../assets/images/camboata.png">
-                            </div>
-                
-                            <div class="col fs-4">
-                                <h1 class="mb-3 "><strong>Camboatá (Cupania vernalis)</strong></h1>
-                                <p style="text-align: justify;">Seu nome vem do Tupi 'cambuatã', que significa 'árvore da chuva'. É uma árvore nativa da Mata Atlântica, pode atingir até 25 metros de altura e tem uma copa arredondada. Decídua, perde suas folhas no inverno. As flores são pequenas e amarelas, e florescem no início da primavera. Os frutos são pequenas bagas vermelhas, que são comestíveis e têm um sabor doce. A casca do camboatá é usada na medicina popular para o tratamento de diversas doenças, como asma, tosse e feridas.</p>
-                                <button id="btn-camboata" class="btn btn-lg btn-primary mt-5 w-100 fs-2">Visualizar no mapa</button>
+        <div class="botao-voltar text-white" onclick="javascript:history.back()">
+            <img src="../../assets/images/arrow-left-solid.svg" alt="Voltar" width="80px" height="80px">
+            <h2 class="ms-2"><strong>Voltar</strong></h2>
+        </div>
+
+        <div class="content-stack justify-content-center bg-success text-white">
+            <div id="carrosel" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carrosel" data-bs-slide-to="0" class="active btn-indicator"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carrosel" data-bs-slide-to="1" class="btn-indicator"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carrosel" data-bs-slide-to="2" class="btn-indicator"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carrosel" data-bs-slide-to="3" class="btn-indicator"
+                        aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carrosel" data-bs-slide-to="4" class="btn-indicator"
+                        aria-label="Slide 5"></button>
+                    <button type="button" data-bs-target="#carrosel" data-bs-slide-to="5" class="btn-indicator"
+                        aria-label="Slide 6"></button>
+                    <button type="button" data-bs-target="#carrosel" data-bs-slide-to="6" class="btn-indicator"
+                        aria-label="Slide 7"></button>
+                </div>
+
+                <div class="carousel-inner p-4">
+                    <div class="carousel-item active p-4">
+                        <div class="container">
+                            <div class="row row-cols-2 g-5">
+                                <div class="col d-flex justify-content-center">
+                                    <img src="../../assets/images/sangra-dagua.png" height="700px" alt="Sangra-d'agua"
+                                        class="w-75">
+                                </div>
+
+                                <div class="col fs-4">
+                                    <h1 class="mb-3 "><strong>Sangra-d'água (<i>Croton urucurana</i>)</strong></h1>
+                                    <p style="text-align: justify;">É uma árvore nativa da América do Sul, encontrada
+                                        principalmente no Brasil, Argentina e Paraguai. É uma árvore de médio porte,
+                                        podendo atingir até 20 metros de altura.
+                                        Seu nome vem da seiva vermelha que é expelida da árvore quando ela é cortada. A
+                                        seiva tem propriedades hemostáticas, anti-inflamatórias e cicatrizantes.
+                                        É também uma fonte de alimento para insetos, pássaros e outros animais.</p>
+                                    <button id="btn-sangra-dagua"
+                                        class="btn btn-lg btn-primary mt-5 w-100 fs-2">Visualizar no mapa</button>
+
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
                     <div class="carousel-item p-4">
                         <div class="container">
                             <div class="row row-cols-2 g-5">
                                 <div class="col d-flex justify-content-center">
-                                    <img src="../../assets/images/abacateiro.png">
+                                    <img src="../../assets/images/quaresmeira.png" height="700px" alt="Quaresmeira"
+                                        class="w-75">
                                 </div>
-                    
                                 <div class="col fs-4">
-                                    <h1 class="mb-3 "><strong>Abacateiro (Persea americana)</strong></h1>
-                                    <p style="text-align: justify;">É uma árvore nativa da América Central e México, de grande porte, podendo atingir até 20 metros de altura. As folhas são coriáceas, lanceoladas e lustrosas. As flores são pequenas e hermafroditas. O fruto é uma drupa, que pode ter formato piriforme, ovóide ou redondo. É uma fruta rica em nutrientes, incluindo vitamina C, vitamina E, potássio e fibras.</p>
-                                    <button id="btn-abacateiro" class="btn btn-lg btn-primary mt-5 w-100 fs-2">Visualizar no mapa</button>
+                                    <h1 class="mb-3 "><strong>Quaresmeira (<i>Plumerum granulosum</i>)</strong></h1>
+                                    <p style="text-align: justify;">É uma árvore ornamental nativa da Mata Atlântica, de
+                                        médio porte, podendo atingir até 12 metros de altura.
+                                        Seu nome vem da época em que ela floresce, que é durante a Quaresma, período de
+                                        40 dias que antecede a Páscoa.
+                                        As flores são polinizadas por insetos, principalmente abelhas e borboletas. Os
+                                        frutos são pequenos e pretos, e dispersos por pássaros.
+                                        As folhas são usadas na medicina popular para o tratamento de diarreia,
+                                        disenteria, hemorragia e dor de garganta.</p>
+                                    <button id="btn-quaresmeira"
+                                        class="btn btn-lg btn-primary mt-5 w-100 fs-2">Visualizar no mapa</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item p-4">
+                        <div class="container">
+                            <div class="row row-cols-2 g-5">
+                                <div class="col d-flex justify-content-center">
+                                    <img src="../../assets/images/bordo-da-noruega.png" height="700px"
+                                        alt="Bordo-da-noruega" class="w-75">
+                                </div>
+                                <div class="col fs-4">
+                                    <h1 class="mb-3 "><strong>Bordo-da-noruega (<i>Acer platanoides</i>)</strong></h1>
+                                    <p style="text-align: justify;">É uma árvore caducifólia de médio porte, nativa da
+                                        Europa e Ásia. É uma árvore decídua, o que significa que perde suas folhas no
+                                        inverno. Pode atingir até 30 metros de altura.
+                                        O nome "bordo" vem do latim "acer", que significa "agudo". Isso se refere aos
+                                        lóbulos das folhas do bordo, que são pontiagudos.
+                                        As flores são pequenas e amarelas, e florescem no início da primavera. Os frutos
+                                        são sementes aladas, dispersos pelo vento.
+                                        É fonte de alimento para insetos, pássaros e outros animais.</p>
+                                    <button id="btn-bordo-da-noruega"
+                                        class="btn btn-lg btn-primary mt-5 w-100 fs-2">Visualizar no mapa</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item p-4">
+                        <div class="container">
+                            <div class="row row-cols-2 g-5">
+                                <div class="col d-flex justify-content-center">
+                                    <img src="../../assets/images/aroeira-vermelha.png" height="700px"
+                                        alt="Aroeira-vermelha" class="w-75">
+                                </div>
+                                <div class="col fs-4">
+                                    <h1 class="mb-3 "><strong>Aroeira-vermelha (<i>Schinus terebinthifolia</i>)</strong>
+                                    </h1>
+                                    <p style="text-align: justify;">É nativa da América do Sul, árvore de pequeno a
+                                        médio porte, podendo atingir de 5 a 10 metros de altura.O nome "aroeira" vem do
+                                        tupi-guarani "aroweira", que significa "árvore de cheiro forte". Tem uma casca
+                                        avermelhada, que é rica em taninos, que são substâncias com propriedades
+                                        adstringentes, anti-inflamatórias e cicatrizantes. As folhas também são ricas em
+                                        taninos e são utilizadas na medicina popular para o tratamento de diarreia,
+                                        disenteria, hemorragia e dor de garganta..</p>
+                                    <button id="btn-aroeira-vermelha"
+                                        class="btn btn-lg btn-primary mt-5 w-100 fs-2">Visualizar no mapa</button>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item p-4">
+                        <div class="container">
+                            <div class="row row-cols-2 g-5">
+                                <div class="col d-flex justify-content-center">
+                                    <img src="../../assets/images/vassourao.png" height="700px" alt="Vassourão"
+                                        class="w-75">
+                                </div>
+
+                                <div class="col fs-4">
+                                    <h1 class="mb-3 "><strong>Vassourão (<i>Vernonanthura discolor</i>)</strong></h1>
+                                    <p style="text-align: justify;">É uma árvore nativa do Brasil. De médio porte,
+                                        podendo atingir até 18 metros de altura. Tem crescimento rápido, podendo atingir
+                                        a maturidade em poucos anos.
+                                        A madeira é leve e de baixa densidade, sendo utilizada na produção de papel,
+                                        compensados e outros produtos de madeira.
+                                        As flores são pequenas e brancas, e são polinizadas por abelhas e outros
+                                        insetos.</p>
+                                    <button id="btn-vassourao" class="btn btn-lg btn-primary mt-5 w-100 fs-2">Visualizar
+                                        no mapa</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item p-4">
+                        <div class="container">
+                            <div class="row row-cols-2 g-5">
+                                <div class="col d-flex justify-content-center">
+                                    <img src="../../assets/images/ipe-tabaco.png" height="700px" alt="Ipê-tabaco"
+                                        class="w-75">
+                                </div>
+                                <div class="col fs-4">
+                                    <h1 class="mb-3 "><strong>Ipê tabaco (<i>Zeyhera tuberculosa</i>)</strong></h1>
+                                    <p style="text-align: justify;">O nome "ipê-tabaco" vem da cor das flores da árvore,
+                                        que são amarelas-esverdeadas, semelhantes à cor do tabaco. A árvore é nativa do
+                                        Brasil. É uma árvore de médio porte, podendo atingir até 20 metros de altura. A
+                                        madeira é leve, resistente e de alta durabilidade natural, sendo utilizada na
+                                        construção civil, marcenaria e móveis. As folhas do ipê-tabaco são felpudas de
+                                        cor diferenciada na face inferior e com formato parecido a estrela</p>
+                                    <button id="btn-ipe-tabaco"
+                                        class="btn btn-lg btn-primary mt-5 w-100 fs-2">Visualizar
+                                        no mapa</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item p-4">
+                        <div class="container">
+                            <div class="row row-cols-2 g-5">
+                                <div class="col d-flex justify-content-center">
+                                    <img src="../../assets/images/cafezinho-do-mato.png" height="700px"
+                                        alt="Cafezinho-do-mato" class="w-75">
+                                </div>
+
+                                <div class="col fs-4">
+                                    <h1 class="mb-3 "><strong>Cafezinho-do-mato (<i>Casearia sp.</i>)</strong></h1>
+                                    <p style="text-align: justify;">É uma planta arbustiva ou arbórea nativa do Brasil.
+                                        É uma planta de pequeno porte, podendo atingir até 4 metros de altura.
+                                        O nome "cafezinho-do-mato" vem do fato de que as folhas e os frutos da planta
+                                        têm um sabor semelhante ao do café. As folhas são utilizadas na medicina popular
+                                        para o tratamento doenças, como dor de cabeça, febre, problemas digestivos e
+                                        renais. Os frutos são comestíveis e podem ser consumidos in natura ou utilizados
+                                        na fabricação de sucos, doces e licores.</p>
+                                    <button id="btn-cafezinho" class="btn btn-lg btn-primary mt-5 w-100 fs-2">Visualizar
+                                        no mapa</button>
+
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                
+
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carrosel" data-bs-slide="prev">
@@ -66,9 +222,9 @@
             <span class="visually-hidden">Next</span>
         </button>
 
-    </div>
 
-    <script src="../bootstrap/bootstrap.bundle.min.js"></script>
-    <script src="../js/primarias.js"></script>
-</body>
+        <script src="../bootstrap/bootstrap.bundle.min.js"></script>
+        <script src="../js/primarias.js"></script>
+    </body>
+
 </html>

@@ -1,8 +1,9 @@
 {
-    "informacoes": {
-        "tipo" : "flora",
-        "titulo" : "Lavanda (Lavandula angustifolia)",
-        "imagem" : "../../assets/images/lavanda.png",
-        "texto" : "É uma planta medicinal e aromática, usada há séculos por suas propriedades calmantes, antibacterianas e antifúngicas. As flores são uma importante fonte de alimento para abelhas e outros polinizadores, contribuindo para a preservação do ecossistema."
-    }
+  "informacoes": {
+    "tipo": "flora",
+    "nome": "Lavanda",
+    "nomeCientifico": "Lavandula angustifolia",
+    "imagem": "../../assets/images/lavanda.png",
+    "sobre": "É uma planta medicinal e aromática, usada há séculos por suas propriedades calmantes, antibacterianas e antifúngicas. As flores são uma importante fonte de alimento para abelhas e outros polinizadores, contribuindo para a preservação do ecossistema."
+  }
 }
