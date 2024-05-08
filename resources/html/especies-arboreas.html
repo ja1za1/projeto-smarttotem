@@ -1,127 +1,149 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Classificação de espécies arbóreas</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
-</head>
-<body>
 
-    <div class="botao-voltar text-white" onclick="javascript:history.back()">
-        <img src="../../assets/images/arrow-left-solid.svg" alt="Voltar" width="80px" height="80px">
-        <h2 class="ms-2"><strong>Voltar</strong></h2>
-    </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Classificação de espécies arbóreas</title>
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
+    </head>
 
-    <div class="content-stack justify-content-center bg-success text-white">
+    <body>
 
-        <div id="carrosel" class="carousel slide">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carrosel" data-bs-slide-to="0" class="active btn-indicator" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carrosel" data-bs-slide-to="1" class="btn-indicator" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carrosel" data-bs-slide-to="2" class="btn-indicator" aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#carrosel" data-bs-slide-to="3" class="btn-indicator" aria-label="Slide 4"></button>
-            </div>
-            <div class="carousel-inner p-4">
-                <div class="carousel-item active p-4">
-                    <div class="container">
-                        <p class="fs-2" style="text-align: justify;">As espécies arbóreas são classificadas de acordo com seu grau de tolerância a luz, umidade e nutrientes do solo. Essas classificações são utilizadas para descrever o estágia de sucessão ecológica em uma determinada área. A seguir estão algumas características: </p>
-                        <table class="table table-light table-bordered text-center mt-5">
-                            <thead class="table-success">
-                                <tr>
-                                    <th>Características</th>
-                                    <th>Pioneiras</th>
-                                    <th>Secundárias Iniciais</th>
-                                    <th>Secundárias Tardias</th>
-                                    <th>Climáticas</th>
-                                </tr>
-                            </thead>
-                            <tbody class="table-group-divider">
-                                <tr>
-                                    <td>Ciclo de vida (anos)</td>
-                                    <td>1 a 8</td>
-                                    <td>5 a 15</td>
-                                    <td>20 a 50</td>
-                                    <td>> 100</td>
-                                </tr>
+        <div class="botao-voltar text-white" onclick="javascript:history.back()">
+            <img src="../../assets/images/arrow-left-solid.svg" alt="Voltar" width="80px" height="80px">
+            <h2 class="ms-2"><strong>Voltar</strong></h2>
+        </div>
+
+        <div class="content-stack justify-content-center bg-success text-white">
+
+            <div id="carrosel" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carrosel" data-bs-slide-to="0" class="active btn-indicator"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carrosel" data-bs-slide-to="1" class="btn-indicator"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carrosel" data-bs-slide-to="2" class="btn-indicator"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carrosel" data-bs-slide-to="3" class="btn-indicator"
+                        aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner p-4">
+                    <div class="carousel-item active p-4">
+                        <div class="container">
+                            <p class="fs-2" style="text-align: justify;">As espécies arbóreas são classificadas de
+                                acordo com seu grau de tolerância a luz, umidade e nutrientes do solo. Essas
+                                classificações são utilizadas para descrever o estágia de sucessão ecológica em uma
+                                determinada área. A seguir estão algumas características: </p>
+                            <table class="table table-light table-bordered text-center mt-5">
+                                <thead class="table-success">
+                                    <tr>
+                                        <th>Características</th>
+                                        <th>Pioneiras</th>
+                                        <th>Secundárias Iniciais</th>
+                                        <th>Secundárias Tardias</th>
+                                        <th>Climáticas</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="table-group-divider">
+                                    <tr>
+                                        <td>Ciclo de vida (anos)</td>
+                                        <td>1 a 8</td>
+                                        <td>5 a 15</td>
+                                        <td>20 a 50</td>
+                                        <td>> 100</td>
+                                    </tr>
                                     <td>Altura (m)</td>
                                     <td>4 a 8</td>
                                     <td>12 a 20</td>
                                     <td>20 a 50</td>
                                     <td>30 a 60</td>
-                                <tr>
-                                    <td>Crescimento</td>
-                                    <td>Muito rápido</td>
-                                    <td>Rápido</td>
-                                    <td>Lento</td>
-                                    <td>Muito lento</td>
-                                </tr>
-            
-                                <tr>
-                                    <td>Necessidade de luz</td>
-                                    <td>Muita luz</td>
-                                    <td>Variável</td>
-                                    <td>Variável</td>
-                                    <td>Apenas depois de adultas</td>
-                                </tr>
-            
-                                <tr>
-                                    <td>Número de espécies em uma comunidade estabelecida</td>
-                                    <td>Pequeno (1 a 5)</td>
-                                    <td>Médio (1 a 40)</td>
-                                    <td>Médio (30 a 60)</td>
-                                    <td>Grande (> 100)</td>
-                                </tr>
-                            </tbody>
-            
-                        </table>
-                    </div>
-                </div>
+                                    <tr>
+                                        <td>Crescimento</td>
+                                        <td>Muito rápido</td>
+                                        <td>Rápido</td>
+                                        <td>Lento</td>
+                                        <td>Muito lento</td>
+                                    </tr>
 
-                <div class="carousel-item p-4">
-                    <div class="container" style="text-align: justify;">
-                        <h1 class="text-center"><strong>Pioneiras</strong></h1>
-                        <p class="fs-2 mt-3">São as primeiras a colonizar áreas com condições adversas, como solos pobres ou perturbações frequentes, como incêndios ou deslizamentos de terra. São caracterizadas por crescerem rapidamente, terem sementes leves e facilmente dispersadas pelo vento, além de serem altamente tolerantes à luz solar.</p>
-                    </div>
-                </div>
+                                    <tr>
+                                        <td>Necessidade de luz</td>
+                                        <td>Muita luz</td>
+                                        <td>Variável</td>
+                                        <td>Variável</td>
+                                        <td>Apenas depois de adultas</td>
+                                    </tr>
 
-                <div class="carousel-item p-4">
-                    <div class="container" style="text-align: justify;">
-                        <h1 class="text-center"><strong>Secundárias</strong></h1>
-                        <p class="fs-2 mt-3">São aquelas que se estabelecem após as espécies pioneiras. Elas requerem condições menos adversas e são menos tolerantes à luz direta. Podem crescer mais lentamente e possuem estratégias de dispersão de sementes variadas, podendo ser levadas por animais ou pelo vento. </p>
-                    </div>
-                </div>
+                                    <tr>
+                                        <td>Número de espécies em uma comunidade estabelecida</td>
+                                        <td>Pequeno (1 a 5)</td>
+                                        <td>Médio (1 a 40)</td>
+                                        <td>Médio (30 a 60)</td>
+                                        <td>Grande (> 100)</td>
+                                    </tr>
+                                </tbody>
 
-                <div class="carousel-item p-4">
-                    <div class="container" style="text-align: justify;">
-                        <h1 class="text-center"><strong>Clímax</strong></h1>
-                        <p class="fs-2 mt-3">São as espécies que se estabelecem em estágios finais da sucessão ecológica. Elas são mais exigentes em termos de luz, solo e umidade. Essas espécies são mais competitivas e dominam a comunidade vegetal, criando um ecossistema estável e equilibrado.  </p>
+                            </table>
+                        </div>
                     </div>
-                </div>
 
+                    <div class="carousel-item p-4">
+                        <div class="container" style="text-align: justify;">
+                            <h1 class="text-center"><strong>Pioneiras</strong></h1>
+                            <p class="fs-2 mt-3">São as primeiras a colonizar áreas com condições adversas, como solos
+                                pobres ou perturbações frequentes, como incêndios ou deslizamentos de terra. São
+                                caracterizadas por crescerem rapidamente, terem sementes leves e facilmente dispersadas
+                                pelo vento, além de serem altamente tolerantes à luz solar.</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item p-4">
+                        <div class="container" style="text-align: justify;">
+                            <h1 class="text-center"><strong>Secundárias</strong></h1>
+                            <p class="fs-2 mt-3">São aquelas que se estabelecem após as espécies pioneiras. Elas
+                                requerem condições menos adversas e são menos tolerantes à luz direta. Podem crescer
+                                mais lentamente e possuem estratégias de dispersão de sementes variadas, podendo ser
+                                levadas por animais ou pelo vento. </p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item p-4">
+                        <div class="container" style="text-align: justify;">
+                            <h1 class="text-center"><strong>Clímax</strong></h1>
+                            <p class="fs-2 mt-3">São as espécies que se estabelecem em estágios finais da sucessão
+                                ecológica. Elas são mais exigentes em termos de luz, solo e umidade. Essas espécies são
+                                mais competitivas e dominam a comunidade vegetal, criando um ecossistema estável e
+                                equilibrado. </p>
+                        </div>
+                    </div>
+
+                </div>
             </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carrosel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carrosel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+
+            <div id="texto-para-audio" class="d-flex flex-column align-items-center position-absolute"
+                style="right: 5%; bottom: 1%;">
+                <p id="texto-reproduzir" class="fs-4 text-center" style="width: 283px;">Reproduzir texto em aúdio</p>
+                <button class="d-flex flex-row align-items-center justify-content-center rounded-circle"
+                    id="btn-reproduzir-som" style="width: 112px; height: 112px;"><img src="../../assets/images/som.png"
+                        id="imagem-botao-reproduzir-audio" width="60%"></button>
+            </div>
+
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carrosel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carrosel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
 
-        <div class="d-flex flex-column align-items-center position-absolute" style="right: 5%; bottom: 1%;">
-            <p id="texto-reproduzir" class="fs-4 text-center" style="width: 283px;">Reproduzir texto em aúdio</p>
-            <button class="d-flex flex-row align-items-center justify-content-center rounded-circle" id="btn-reproduzir-som" style="width: 112px; height: 112px;"><img src="../../assets/images/som.png" id="imagem-botao-reproduzir-audio" width="60%"></button>
-        </div>
-        
-    </div>
 
-    
 
-    <script src="../bootstrap/bootstrap.bundle.min.js"></script>
-    <script src="../js/reproduzir-texto.js"></script>
-</body>
+        <script src="../bootstrap/bootstrap.bundle.min.js"></script>
+        <script src="../js/reproduzir-texto.js"></script>
+    </body>
+
 </html>

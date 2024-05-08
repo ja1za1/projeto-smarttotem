@@ -1,78 +1,94 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Classificação geológica</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
-</head>
-<body>
 
-    <div class="botao-voltar text-dark" onclick="javascript:history.back()">
-        <img src="../../assets/images/arrow-left-solid.svg" alt="Voltar" width="80px" height="80px">
-        <h2 class="ms-2"><strong>Voltar</strong></h2>
-    </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Classificação geológica</title>
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
+    </head>
 
-    <div class="content-stack bg-brown text-dark justify-content-center">
+    <body>
 
-        <div id="carrosel" class="carousel carousel-dark slide">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carrosel" data-bs-slide-to="0" class="active btn-indicator" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carrosel" data-bs-slide-to="1" class="btn-indicator" aria-label="Slide 2"></button>
-            </div>
+        <div class="botao-voltar text-dark" onclick="javascript:history.back()">
+            <img src="../../assets/images/arrow-left-solid.svg" alt="Voltar" width="80px" height="80px">
+            <h2 class="ms-2"><strong>Voltar</strong></h2>
+        </div>
 
-            <div class="carousel-inner p-4">
+        <div class="content-stack bg-brown text-dark justify-content-center">
 
-                <div class="carousel-item active p-4">
-                    <div class="container">
-                        <div class="d-flex flex-column align-items-center justify-content-center" style="text-align: justify;">
-                            <div class="d-flex align-items-center fs-2 mt-3">
-                                <p>A região de Barbacena apresenta uma geologia dominada por gnaisses, granitos, migmatitos e gabros. A topografia suave é resultado de um longo processo de intemperização das rochas, formando morros suaves e cristas. Vê-se os desníveis no mapa: </p>
-            
-                            </div>
-            
-                            <div class="mt-2">
-                                <img src="../../assets/images/mapa-classific-geologica.jpeg.jpg" alt="Mapa da classificação geológica" class="w-100" height="550px">
+            <div id="carrosel" class="carousel carousel-dark slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carrosel" data-bs-slide-to="0" class="active btn-indicator"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carrosel" data-bs-slide-to="1" class="btn-indicator"
+                        aria-label="Slide 2"></button>
+                </div>
+
+                <div class="carousel-inner p-4">
+
+                    <div class="carousel-item active p-4">
+                        <div class="container">
+                            <div class="d-flex flex-column align-items-center justify-content-center"
+                                style="text-align: justify;">
+                                <div class="d-flex align-items-center fs-2 mt-3">
+                                    <p>A região de Barbacena apresenta uma geologia dominada por gnaisses, granitos,
+                                        migmatitos e gabros. A topografia suave é resultado de um longo processo de
+                                        intemperização das rochas, formando morros suaves e cristas. Vê-se os desníveis
+                                        no mapa: </p>
+
+                                </div>
+
+                                <div class="mt-2">
+                                    <img src="../../assets/images/mapa-classific-geologica.jpeg.jpg"
+                                        alt="Mapa da classificação geológica" class="w-100" height="550px">
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="carousel-item p-4">
-                    <div class="container">
-                        <div class="row row-cols-2 g-5 " style="text-align: justify;">
-                            <div class="col d-flex flex-column justify-content-center fs-2">
-                                <p>No entanto, áreas com maior umidade e erosão do solo, levando à perda de nutrientes e biodiversidade, fragmentando o ambiente. Os solos, principalmente latossolos, originam-se da intemperização de gnaisses e granitos, com presença de cambissolos e gleissolos na região de Barbacena.</p>
-                            </div>
-            
-                            <div class="col">
-                                <img src="../../assets/images/classificacao-geologica.jpeg" alt="Classificação geológica
+                    <div class="carousel-item p-4">
+                        <div class="container">
+                            <div class="row row-cols-2 g-5 " style="text-align: justify;">
+                                <div class="col d-flex flex-column justify-content-center fs-2">
+                                    <p>No entanto, áreas com maior umidade e erosão do solo, levando à perda de
+                                        nutrientes e biodiversidade, fragmentando o ambiente. Os solos, principalmente
+                                        latossolos, originam-se da intemperização de gnaisses e granitos, com presença
+                                        de cambissolos e gleissolos na região de Barbacena.</p>
+                                </div>
+
+                                <div class="col">
+                                    <img src="../../assets/images/classificacao-geologica.jpeg" alt="Classificação geológica
                                  do solo" class="w-100 mb-5" height="600px">
-                                
+
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carrosel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carrosel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carrosel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carrosel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
 
-        <div class="d-flex flex-column align-items-center position-absolute" style="right: 5%; bottom: 1%;">
-            <p id="texto-reproduzir" class="fs-4 text-center" style="width: 283px;">Reproduzir texto em aúdio</p>
-            <button class="d-flex flex-row align-items-center justify-content-center rounded-circle" id="btn-reproduzir-som" style="width: 112px; height: 112px;"><img src="../../assets/images/som.png" id="imagem-botao-reproduzir-audio" width="60%"></button>
+            <div id="texto-para-audio" class="d-flex flex-column align-items-center position-absolute"
+                style="right: 5%; bottom: 1%;">
+                <p id="texto-reproduzir" class="fs-4 text-center" style="width: 283px;">Reproduzir texto em aúdio</p>
+                <button class="d-flex flex-row align-items-center justify-content-center rounded-circle"
+                    id="btn-reproduzir-som" style="width: 112px; height: 112px;"><img src="../../assets/images/som.png"
+                        id="imagem-botao-reproduzir-audio" width="60%"></button>
+            </div>
         </div>
-    </div>
 
-    <script src="../bootstrap/bootstrap.bundle.min.js"></script>
-    <script src="../js/reproduzir-texto.js"></script>
-</body>
+        <script src="../bootstrap/bootstrap.bundle.min.js"></script>
+        <script src="../js/reproduzir-texto.js"></script>
+    </body>
+
 </html>

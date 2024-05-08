@@ -1,35 +1,51 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre o totem</title>
-    <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/styles.css">
-    <script src="../js/scrollreveal.js"></script>
-</head>
-<body>
-    <div class="botao-voltar text-dark" onclick="javascript:history.back()">
-        <img src="../../assets/images/arrow-left-solid.svg" alt="Voltar" width="80px" height="80px">
-        <h2 class="ms-2"><strong>Voltar</strong></h2>
-    </div>
 
-    <div class="content-stack justify-content-center bg-white text-dark" >
-        <div class="container w-50 mt-5 texto-scroll-reveal" style="text-align: justify;">
-            <div class="mb-5 text-center">
-                <h1>Projeto Smart Totem</h1>
-            </div>
-            <div class="fs-3">
-                <p>Este projeto foi desenvolvido com intuito de descaracterizar um aparelho de TVBOX para reutilizá-lo de forma legal. Este aplicativo foi desenvolvido por João Lucas, estudante de Sistemas para Internet no IF Barbacena, em parceria com Abigail Carpinetti, estudante de Gestão Ambiental no IF Barbacena.</p>
-            </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sobre o totem</title>
+        <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/styles.css">
+        <script src="../js/scrollreveal.js"></script>
+    </head>
 
-            <div class="d-flex justify-content-center">
-                <img src="../../assets/images/logo-projeto.png">
-            </div>
-            
+    <body>
+        <div class="botao-voltar text-dark" onclick="javascript:history.back()">
+            <img src="../../assets/images/arrow-left-solid.svg" alt="Voltar" width="80px" height="80px">
+            <h2 class="ms-2"><strong>Voltar</strong></h2>
         </div>
-    </div>
-    
-    <script src="../js/scrollreveal-config.js"></script>
-</body>
+
+        <div class="content-stack justify-content-center bg-white text-dark">
+            <div class="container w-50 mt-5 texto-scroll-reveal" style="text-align: justify;">
+                <div class="mb-5 text-center">
+                    <h1>Projeto Smart Totem</h1>
+                </div>
+                <div class="fs-3">
+                    <p>Este Smart Totem está sendo executado em um aparelho de TV BOX pirata apreendido pela Receita
+                        Federal do Brasil e que seria destruído. Além de torná-lo legal, evitamos a geração de mais lixo
+                        eletrônico para o meio-ambiente. O aplicativo foi desenvolvido pelos alunos João Lucas Terra,
+                        estudante do curso Sistemas para Internet, e Abigail Carpinetti, estudante de Gestão Ambiental,
+                        sob orientação do Prof. Herlon Camargo.</p>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                    <img src="../../assets/images/logo-projeto.png">
+                </div>
+
+            </div>
+
+            <div id="texto-para-audio" class="d-flex flex-column align-items-center position-absolute"
+                style="right: 5%; bottom: 10%;">
+                <p id="texto-reproduzir" class="fs-4 text-center" style="width: 283px;">Reproduzir texto em aúdio</p>
+                <button class="d-flex flex-row align-items-center justify-content-center rounded-circle"
+                    id="btn-reproduzir-som" style="width: 112px; height: 112px;"><img src="../../assets/images/som.png"
+                        id="imagem-botao-reproduzir-audio" width="60%"></button>
+            </div>
+        </div>
+
+        <script src="../js/scrollreveal-config.js"></script>
+        <script src="../js/reproduzir-texto.js"></script>
+    </body>
+
 </html>
