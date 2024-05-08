@@ -194,9 +194,9 @@ window.onload = () => {
   if (videos.length > 0) {
     adicionarEventoVideos(videos);
   }
-  const textoParaAudio = document.getElementById("carrosel");
-  if (textoParaAudio) {
-    textoParaAudio.addEventListener("slide.bs.carousel", (e) => {
+  const carrosel = document.getElementById("carrosel");
+  if (carrosel) {
+    carrosel.addEventListener("slide.bs.carousel", (e) => {
       const slideCorrente = e.to;
       if (slideCorrente > audios.length - 1) {
         document
@@ -207,6 +207,8 @@ window.onload = () => {
           .getElementById("texto-para-audio")
           .classList.remove("visually-hidden");
       }
+
+      pausarVideoEmReproducao();
     });
   }
 };
