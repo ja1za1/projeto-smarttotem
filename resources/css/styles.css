@@ -1,112 +1,111 @@
-/* * {
-    cursor: none !important;
-}  */
+* {
+  cursor: none !important;
+}
 
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    color: white;
-    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  color: white;
+  min-height: 100vh;
 }
 
 video {
-    max-width: 600px;
-    max-height: 600px;
+  max-width: 600px;
+  max-height: 600px;
 }
 
 .imagem-fundo {
-    background-image: url("../../assets/images/Vista-Aérea-1-Rodrigo-Oliveira.jpeg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: rgba(0, 0, 0, 0.7);
-    background-blend-mode: multiply;
-
+  background-image: url("../../assets/images/Vista-Aérea-1-Rodrigo-Oliveira.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.7);
+  background-blend-mode: multiply;
 }
 
 .tamanho-padrao {
-    width: 150px;
-    height: 150px;
+  width: 150px;
+  height: 150px;
 }
 
 .content-stack {
-    display: flex;
-    flex: 1 1 auto;
-    flex-direction: column;
-    align-self: stretch;
-    align-items: center;
-    padding: 3rem;
-    min-height: 100vh;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  align-self: stretch;
+  align-items: center;
+  padding: 3rem;
+  min-height: 100vh;
 }
 
 .shadow-lg-custom {
-    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 5) !important;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 5) !important;
 }
 
 .shadow-sm-custom {
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 5) !important;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 5) !important;
 }
 
 .imagem-card {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: rgba(0, 0, 0, 0.4);
-    background-blend-mode: multiply;
-    width: 400px;
-    height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.4);
+  background-blend-mode: multiply;
+  width: 400px;
+  height: 400px;
 }
 
 .imagem-card-vertical {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: rgba(0, 0, 0, 0.4);
-    background-blend-mode: multiply;
-    width: 320px;
-    height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.4);
+  background-blend-mode: multiply;
+  width: 320px;
+  height: 400px;
 }
 
 .bg-brown {
-    background-color: #FFD78F;
+  background-color: #ffd78f;
 }
 
 .botao-voltar {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    position: fixed;
-    top: 5%;
-    left: 2%;
-    cursor: pointer;
-    color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: fixed;
+  top: 5%;
+  left: 2%;
+  cursor: pointer;
+  color: white;
 }
 
 .carousel-control-next,
 .carousel-control-prev {
-    top: 50% !important;
-    bottom: 50% !important;
-    opacity: 1 !important;
+  top: 50% !important;
+  bottom: 50% !important;
+  opacity: 1 !important;
 }
 
 .carousel-control-next-icon,
 .carousel-control-prev-icon {
-    width: 10rem !important;
-    height: 10rem !important;
+  width: 10rem !important;
+  height: 10rem !important;
 }
 
 .carousel-indicators {
-    margin-bottom: -2rem !important;
+  margin-bottom: -2rem !important;
 }
 
 .btn-indicator {
-    width: 10rem !important;
-    height: 10px !important;
+  width: 10rem !important;
+  height: 10px !important;
 }
 
 span.carousel-control-next-icon {
-    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='black'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/></svg>");
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='black'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/></svg>");
 }
 
 span.carousel-control-prev-icon {
-    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='black'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/></svg>");
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='black'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/></svg>");
 }
